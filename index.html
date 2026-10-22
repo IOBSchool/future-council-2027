@@ -476,7 +476,7 @@ footer{padding:36px 0 48px;text-align:center;font-size:12px;color:var(--sub)}
   // 申込受付＝ページ内フォーム → 受付GAS（有料申込_2026の「未来会議ツアー2027」タブに記録・申込者へ自動返信・hi@iob.bio へ通知）
   // → カード・PayPalはそのまま決済ページへ／銀行振込は完了画面（振込先は自動返信メール）
   var GAS_URL = "";
-  // お席確保代€500の決済ページ（日本在住・欧州在住とも同額）。URLが空のあいだ、そのボタンは表示しない
+  // お席確保代€500の決済ページ（日本在住の方向け）。URLが空のあいだ、そのボタンは表示しない
   var PAY_LINKS = { Stripe: "", PayPal: "" };
   var SRC = (function(){
     var s = (new URLSearchParams(location.search).get("src") || "").toLowerCase().replace(/[^a-z0-9_-]/g, "").slice(0, 20);
