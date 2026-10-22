@@ -27,14 +27,12 @@ h2{font-size:26px;margin-bottom:24px}
 p{margin-bottom:1.1em;word-break:auto-phrase;text-wrap:pretty}
 p:last-child{margin-bottom:0}
 
-/* hero */
-.hero{position:relative;color:#fff;min-height:100svh;display:flex;align-items:flex-end;background:#333 url('img/y2026_020.jpg') center/cover no-repeat}
-.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(40,25,15,.15) 0%,rgba(40,25,15,.25) 40%,rgba(40,25,15,.78) 100%)}
-.hero .wrap{position:relative;padding-top:80px;padding-bottom:56px}
-.hero .eyebrow{color:#fff}
-.hero h1{font-size:28px;margin-bottom:20px;word-break:auto-phrase}
-.hero-sub{font-family:'Zen Old Mincho',serif;font-size:18px;margin:-4px 0 18px}
-.hero .meta{font-size:15px;line-height:1.9}
+/* hero（写真の上に文字を重ねない：写真→その下に見出し） */
+.hero{background:var(--bg);color:var(--title)}
+.hero-img{height:58svh;min-height:300px;background:#ddd url('img/y2026_020.jpg') center/cover no-repeat}
+.hero .wrap{padding-top:36px;padding-bottom:44px}
+.hero h1{font-size:27px;margin-bottom:20px;word-break:auto-phrase}
+.hero .meta{font-size:15px;line-height:1.9;border-top:1px solid var(--line);padding-top:14px}
 .hero .meta span{display:block}
 
 /* intro */
@@ -82,6 +80,57 @@ p:last-child{margin-bottom:0}
 .reply{background:var(--title);color:#fff;border-radius:18px;padding:32px 24px;text-align:center}
 .reply p{margin-bottom:.8em}
 .reply .big{font-family:'Zen Old Mincho',serif;font-size:22px;font-weight:700}
+
+/* policy */
+.policy{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:4px 20px}
+.policy summary{cursor:pointer;font-weight:700;color:var(--accent);padding:14px 0;list-style:none}
+.policy summary::-webkit-details-marker{display:none}
+.policy summary::before{content:"＋ "}
+.policy[open] summary::before{content:"－ "}
+.policy h4{font-size:15px;margin:20px 0 6px;color:var(--title)}
+.policy p,.policy li{font-size:14px}
+.policy ul{padding-left:1.3em;margin-bottom:1em}
+.policy[open]{padding-bottom:18px}
+.ctable{width:100%;border-collapse:collapse;font-size:14px;margin:8px 0}
+.ctable th,.ctable td{border:1px solid var(--line);padding:8px;text-align:left;vertical-align:top;word-break:auto-phrase}
+.ctable th{background:var(--bg);font-weight:700}
+
+/* apply */
+.steps{list-style:none;margin:8px 0 20px}
+.steps li{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px}
+.steps .no{flex:0 0 28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:14px;margin-top:3px}
+.steps small{display:block;font-size:13px;color:var(--sub)}
+.apform{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 20px;margin-top:8px}
+.field{margin-bottom:20px}
+.field label,.field .lbl{display:block;font-weight:700;margin-bottom:6px}
+.req{display:inline-block;margin-left:8px;font-size:11px;color:#fff;background:var(--accent);border-radius:4px;padding:0 6px;vertical-align:2px}
+.help{font-size:13px;color:var(--sub);margin-bottom:6px}
+.field input[type=text],.field input[type=email],.field textarea{width:100%;font:inherit;font-size:16px;padding:12px;border:1px solid #cfc6b4;border-radius:8px;background:#fff;color:var(--title)}
+.radios{display:grid;gap:8px}
+.radios label{display:flex;gap:10px;align-items:center;font-weight:400;border:1px solid #cfc6b4;border-radius:8px;padding:12px;background:#fff}
+.radios input{width:20px;height:20px;accent-color:var(--accent)}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:14px}
+.check input{width:22px;height:22px;flex:0 0 22px;margin-top:3px;accent-color:var(--accent)}
+.check label{font-weight:400}
+.check a{color:var(--blue)}
+.paylead{font-weight:700;margin:8px 0 12px}
+.paylead small{display:block;font-weight:400;font-size:13px;color:var(--sub)}
+.payopts{display:grid;gap:10px}
+.paybtn{width:100%;font:inherit;border:0;border-radius:12px;background:var(--accent);color:#fff;padding:14px 16px;cursor:pointer;text-align:center;line-height:1.6}
+.paybtn b{display:block;font-size:17px}
+.paybtn span{display:block;font-size:13px;opacity:.95}
+.paybtn.bank{background:var(--title)}
+.paybtn:disabled{opacity:.5}
+.formerr{color:#c0392b;font-weight:700;margin-top:12px}
+.done{display:none;text-align:center;padding:24px 6px}
+.done .big{font-family:'Zen Old Mincho',serif;font-size:20px;color:var(--accent);line-height:1.7;margin-bottom:12px}
+.cta{display:block;text-align:center;background:var(--accent);color:#fff;font-weight:700;text-decoration:none;border-radius:999px;padding:15px 20px}
+.contact{text-align:center;font-size:14px;margin-top:18px}
+.contact a{color:var(--blue)}
+#stickyCta{position:fixed;left:0;right:0;bottom:0;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(249,247,239,.96);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .25s;z-index:20}
+#stickyCta.on{transform:none}
+#stickyCta a{display:block;max-width:420px;margin:0 auto;text-align:center;background:var(--accent);color:#fff;font-weight:700;text-decoration:none;border-radius:999px;padding:13px}
+body.has-sticky footer{padding-bottom:110px}
 footer{padding:36px 0 48px;text-align:center;font-size:12px;color:var(--sub)}
 .sep{background:#fff}
 @media (min-width:720px){
@@ -94,9 +143,10 @@ footer{padding:36px 0 48px;text-align:center;font-size:12px;color:var(--sub)}
 <body>
 
 <header class="hero">
+  <div class="hero-img" role="img" aria-label="タナホフの景色（2026年）"></div>
   <div class="wrap">
     <p class="eyebrow">オーガニック未来会議 2027</p>
-    <h1>来年の夢を、仲間と育てる一年へ。<br>その夏を、タナホフで。</h1>
+    <h1>来年の夢を、<br>仲間と育てる一年へ。<br>その夏を、タナホフで。</h1>
     <p class="meta">
       <span>2027年6月28日（月）〜7月3日（土）　5泊6日</span>
       <span>南ドイツ・バイエルン　ヨーロッパアルプスの麓</span>
@@ -142,15 +192,49 @@ footer{padding:36px 0 48px;text-align:center;font-size:12px;color:var(--sub)}
 
 <section class="sep">
   <div class="wrap">
-    <p class="eyebrow">舞台はタナホフ</p>
-    <h2>世界中のウェルネスホテルを巡った人が、<br>「世界一」と話していたホテル。</h2>
-    <p>2019年まで、日本のサステナブルウェルネス業界で大きな影響力を持つ四角大輔さんと一緒に、仲間とこのビオホテルを訪ねてきました。<br>
-    世界中のウェルネスホテルを巡ってきた大輔さんが「世界一」と話していたのが、タナホフです。</p>
-    <p>はじまりは100年前。一人のドクターが建てた療養所でした。<br>
-    薬に頼らず、自然と向き合い、バランスのとれた食事と運動で、病気は自ずと治っていく。そう信じたドクター一家が、代々受け継いできた場所です。</p>
-    <p>いまは、会社の価値を「利益」ではなく「みんなの幸せにどれだけ貢献したか」で測る、新しい経済のあり方のモデル企業として注目されています。</p>
+    <p class="eyebrow">タナホフで過ごす時間</p>
+    <h2>朝から夜まで、<br>こんな時間が流れます。</h2>
+    <p>2026年の滞在では、毎朝、放牧された牛たちのカウベルの音で目を覚ましました。バルコニーから山を眺めて、一日をはじめました。</p>
+    <p>食事や飲み物は、ローカル＆オーガニックの食材が中心です。コスメなどの日用品、タオルやベッドリネンまで、可能なかぎりオーガニックで、倫理的に配慮されたものが使われています。</p>
+    <div class="photo"><img src="img/y2026_050.jpg" alt="テラスで昼食を囲む仲間たち" loading="lazy" decoding="async"></div>
+    <p>山を270度ぐるりと眺めながら泳げる、25メートルの屋外プール。サウナも、ジムもあります。プール、サウナ、ジムは、2027年の宿泊にも含まれます。</p>
+    <div class="photo"><img src="img/y2026_187.jpg" alt="山を望む屋外プール" loading="lazy" decoding="async"></div>
+    <p>ホテルには、ヨガ、ピラティス、ハイキング、アクアトレーニングなど、日替わりのアクティビティがあります。ヨガなど、ホテルの活動は、2027年も自由参加で使えます。</p>
+    <p>何もしない時間を選ぶことも、歓迎されています。</p>
+    <div class="photo"><img src="img/y2026_311.jpg" alt="屋外プールのデッキで過ごす人たち" loading="lazy" decoding="async"></div>
+    <p>2026年の夜は、満天の星に、その日の小さな喜びを感謝しました。</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">なぜ、夏をタナホフで</p>
+    <h2>私が、何度もここに戻る理由。</h2>
+    <p>タナホフがなぜいいのか。言葉にするのは、難しいです。</p>
+    <div class="voices">
+      <blockquote>「この場所に本当に何かが宿ってると感じるから、行った人だけがわかるというか」</blockquote>
+    </div>
+    <p>ここに来た人の中に、人生を変えていった人が、何人もいました。<br>
+    私自身も、ここに戻り続けることで、人生をよりいい形にできてきました。</p>
+    <p>最初に四角大輔さんと来た時と比べて、私は本当に成長しました。あの時想像していた人生とは、比べられないほどの自己実現を叶えてきました。</p>
+    <p>タナホフは、私が「私に戻る」場所です。2026年で、6回目の訪問になりました。</p>
+    <div class="photo"><img src="img/y2019_044.jpg" alt="夕方のタナホフの庭とホテル" loading="lazy" decoding="async"></div>
+  </div>
+</section>
+
+<section class="sep">
+  <div class="wrap">
+    <p class="eyebrow">タナホフという場所</p>
+    <h2>100年前の療養所から、<br>今のタナホフへ。</h2>
+    <p>タナホフのはじまりは、約100年前。一人の医師が建てた療養所でした。<br>
+    自然の中で、食事・運動・休息を整える。その考え方は、今もホテルの在り方に受け継がれています。</p>
+    <p>タナホフには「クナイプ原則」という考え方があり、体も心も魂も、すべてにアプローチする空間があります。</p>
+    <p>ホテルは、シュタイナー思想にもとづいて設計されています。お客さん同士の交流が生まれ、タナホフを応援する仲間へとつながっていく。一人で訪れても、同じ思いを持つ人との出会いが生まれる。そんなコミュニティが育つように設計されています。</p>
+    <p>ホテルの森の木には、ホットスポットがあると、私は感じています。まわりに、結界が張られているような気さえします。</p>
+    <p>いまは、「公共善経済」のモデル企業としても注目されています。会社の価値を、利益だけではなく、「みんなの幸せにどれだけ貢献したか」で考える経済のあり方です。</p>
+    <p>2019年まで、日本のサステナブルウェルネス業界で大きな影響力を持つ四角大輔さんと行ってきたビオホテルツアーでも、訪れてきた場所です。世界中のウェルネスホテルを巡ってきた大輔さんが「世界一」と話していたホテルでもあります。</p>
     <div class="photo"><img src="img/y2018_022.jpg" alt="ハイキングの途中で撮った仲間たちの集合写真" loading="lazy" decoding="async"></div>
-    <div class="photo"><img src="img/y2018_058.jpg" alt="TANNERHOFの看板" loading="lazy"></div>
+    <div class="photo"><img src="img/y2018_058.jpg" alt="TANNERHOFの看板" loading="lazy" decoding="async"></div>
   </div>
 </section>
 
@@ -165,14 +249,11 @@ footer{padding:36px 0 48px;text-align:center;font-size:12px;color:var(--sub)}
       <blockquote>「ここだけ温かい結界があると体感できる場所」</blockquote>
       <p class="src">2026年のタナホフ・リトリートの参加者の声</p>
     </div>
-    <p>毎朝、放牧された牛たちのカウベルの音で目を覚まして、バルコニーから山を眺めて一日をはじめる。<br>
-    夜は満天の星に、その日の小さな喜びを感謝する。</p>
-    <div class="photo"><img src="img/y2026_050.jpg" alt="テラスで昼食を囲む仲間たち" loading="lazy" decoding="async"></div>
     <div class="photo"><img src="img/y2026_group2.jpg" alt="ラウンジに集まった2026年の仲間たち" loading="lazy" decoding="async"></div>
   </div>
 </section>
 
-<section>
+<section id="info">
   <div class="wrap">
     <p class="eyebrow">2027年のこと</p>
     <h2>わかっていること</h2>
@@ -183,22 +264,144 @@ footer{padding:36px 0 48px;text-align:center;font-size:12px;color:var(--sub)}
         <dt>場所</dt><dd>南ドイツ・バイエルン<br>ヨーロッパアルプスの麓　ビオホテル「タナホフ」</dd>
         <dt>どんな会</dt><dd>招待制のオーガニック未来会議。来年から月1回オンラインで集まり、夏にタナホフで夢の発表会をして、最終日に次の一年の宣言をします</dd>
         <dt>人数</dt><dd>少人数で開催します。目安は10名です</dd>
-        <dt>参加費<br>（早割）</dt><dd><span class="price">€2,900</span><span class="note">2026年12月末までに、お席確保代（€500）をお支払いの方が対象です</span></dd>
-        <dt>参加費<br>（一般価格）</dt><dd><span class="price">€3,200</span></dd>
-        <dt>含まれるもの</dt><dd><span class="note" style="margin-top:0">5泊6日の滞在期間にかかるすべての経費を含みます（飲み物を除く）</span><span class="note">ミュンヘン空港からの電車移動を含みます。航空券は含みません</span><span class="note">ご家族・ご夫婦の場合は、金額をお出しします</span></dd>
-        <dt>お席確保代</dt><dd><span class="price">€500（前金）</span><span class="note">参加費の一部として、お支払いの参加費から差し引きます</span><span class="note">お支払いのご案内は、12月ごろにお送りします</span><span class="note">最少催行人数に届かなかった場合は、全額お返しします</span><span class="note">60日前までのキャンセルは、事務手数料€100を除いてお返しします</span></dd>
-        <dt>残金</dt><dd><span class="note" style="margin-top:0">参加費の残りは、2027年5月末までにお支払いください</span></dd>
+        <dt>参加費<br>（早割）</dt><dd><span class="price">€2,360</span><span class="note">2026年12月31日までに、お席確保代（前金）€500をお支払いの方が対象です</span></dd>
+        <dt>参加費<br>（一般価格）</dt><dd><span class="price">€2,510</span><span class="note">どちらも税込みです。日本在住の方も、欧州在住の方も、同じ金額です</span></dd>
+        <dt>含まれるもの</dt><dd><span class="note" style="margin-top:0">5泊6日の滞在期間にかかるすべての経費を含みます（飲み物を除く）</span><span class="note">ミュンヘン空港からの電車移動を含みます</span><span class="note">航空券は含みません</span><span class="note">ご家族・ご夫婦の場合は、金額をお出しします</span></dd>
+        <dt>お席確保代<br>（前金）</dt><dd><span class="price">€500</span><span class="note">お申し込みのときにお支払いいただきます。お支払いが完了した時点で、お申し込みが確定します</span><span class="note">参加費の一部として、残金から差し引きます</span></dd>
+        <dt>残金</dt><dd><span class="note" style="margin-top:0">2027年5月末までにお支払いください</span><span class="note">早割の方は€1,860、一般価格の方は€2,010です</span></dd>
       </dl>
     </div>
-    <h3 class="sub">キャンセルについて</h3>
-    <p><a class="plink" href="https://www.notion.so/IOB-2dfb1e86167a80a7b222ec794201a5a8?pvs=21" target="_blank" rel="noopener">キャンセルポリシーはこちら</a></p>
+    <h3 class="sub">キャンセルポリシー</h3>
+    <details class="policy">
+      <summary>キャンセルポリシーを読む</summary>
+      <p>本ツアーは、海外施設（ドイツ・ホテルなど）との連携により実施されます。そのため、時差や現地ホテル側のキャンセル規定をふまえ、以下のポリシーを適用いたします。</p>
+      <h4>お席確保代（デポジット）について</h4>
+      <p>お申し込み時に、お席確保代（デポジット）として€500をお支払いいただきます。お席確保代は、以下の費用に充当されます。</p>
+      <ul>
+        <li>企画・事務・運営準備費用（返金不可）：€250</li>
+        <li>宿泊ベッド確保・ホテル事前手配費用（返金不可）：€100</li>
+        <li>条件付き返金対象分：€150</li>
+      </ul>
+      <p>お席確保代€500のうち、返金の対象となるのは最大€150のみとなります。</p>
+      <h4>キャンセル料について</h4>
+      <p>お申し込み確定後にキャンセルされる場合、以下のキャンセル料が適用されます。</p>
+      <table class="ctable">
+        <tr><th>キャンセル日（旅行開始日からの起算）</th><th>キャンセル料</th></tr>
+        <tr><td>60日前まで</td><td>€150を返金（お席確保代のうち€350は返金不可）</td></tr>
+        <tr><td>59〜45日前</td><td>参加費の30％</td></tr>
+        <tr><td>44〜31日前</td><td>参加費の50％</td></tr>
+        <tr><td>30〜15日前</td><td>参加費の80％</td></tr>
+        <tr><td>14日前以降</td><td>参加費の100％</td></tr>
+        <tr><td>当日・無連絡</td><td>参加費の100％</td></tr>
+      </table>
+      <p class="note">※参加費には、お席確保代€500を含みます。</p>
+      <h4>途中参加・途中離脱について</h4>
+      <p>お客様都合による途中参加、途中離脱・早期帰国などによる未使用分の返金はございません。※現地ホテル・サービス提供者も返金不可のため。</p>
+      <h4>IOBがツアー催行を中止した場合</h4>
+      <p>レムケの急病、不可抗力などにより実施が困難となり、IOBが催行を中止した場合は、お支払いいただいた参加費を全額返金いたします。※ただし、お客様が個人で手配された航空券・交通費・宿泊費などは補償対象外となります。</p>
+      <h4>お客様の事情（病気・家庭の事情など）によるキャンセル</h4>
+      <p>理由の如何にかかわらず、上記キャンセル料が適用されます。※海外旅行キャンセル保険の加入を推奨いたします。</p>
+      <h4>支払い方法と入金確認について</h4>
+      <ul>
+        <li>お支払いの確認をもって、正式なお申し込み完了となります。</li>
+        <li>銀行振込の場合、反映に数日かかる場合があります。</li>
+        <li>時差の関係でホテル側へ即日連絡ができないため、キャンセル料の算定は日本時間で管理します。</li>
+      </ul>
+      <h4>重要事項</h4>
+      <p>ホテルや現地施設のキャンセル規定は、IOBが契約当事者となります。そのため、IOBが費用を立て替えることのないよう、本ポリシーを設定しています。ご自身で手配される航空券・交通手段・保険については、お客様のご負担となります。</p>
+      <h4>推奨保険</h4>
+      <ul>
+        <li>海外旅行保険（医療）</li>
+        <li>航空機遅延保険</li>
+        <li>キャンセル保険（病気・事故で参加できない場合に備えて）</li>
+      </ul>
+    </details>
+  </div>
+</section>
+
+
+<section id="apply" class="sep">
+  <div class="wrap">
+    <p class="eyebrow">お申し込み</p>
+    <h2>お申し込みと、<br>お席確保代（前金）のお支払い</h2>
+    <ol class="steps">
+      <li><span class="no">1</span><div>お名前・ご住所・メールアドレスを入力します</div></li>
+      <li><span class="no">2</span><div>お住まいの地域を選び、キャンセルポリシーに同意して、お支払い方法のボタンを押します</div></li>
+      <li><span class="no">3</span><div>お席確保代（前金）€500をお支払いいただきます<small>カード・PayPalの方は、そのままお支払いのページへ移動します。銀行振込の方には、振込先をメールでお送りします。お支払いが完了した時点で、お申し込みが確定します。</small></div></li>
+    </ol>
+
+    <form id="applyForm" class="apform" novalidate>
+      <div class="field">
+        <label for="f-name">お名前<span class="req">必須</span></label>
+        <input type="text" id="f-name" name="name" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="f-roman">お名前のローマ字<span class="req">必須</span></label>
+        <p class="help">パスポートと同じ表記でお書きください（例：LEMPKE NATSUKO）。ホテルの手配に使います。</p>
+        <input type="text" id="f-roman" name="roman" autocomplete="off" required>
+      </div>
+      <div class="field">
+        <label for="f-address">ご住所<span class="req">必須</span></label>
+        <p class="help">国・郵便番号・都道府県・市区町村・番地までお書きください。</p>
+        <textarea id="f-address" name="address" autocomplete="street-address" rows="3" required></textarea>
+      </div>
+      <div class="field">
+        <label for="f-email">メールアドレス<span class="req">必須</span></label>
+        <p class="help">お支払いの確認や、旅の大切なご連絡を、このアドレスへお送りします。</p>
+        <input type="email" id="f-email" name="email" autocomplete="email" required>
+      </div>
+      <div class="field">
+        <span class="lbl">お住まいの地域<span class="req">必須</span></span>
+        <div class="radios">
+          <label><input type="radio" name="region" value="日本在住" required>日本在住</label>
+          <label><input type="radio" name="region" value="欧州（EU）在住">欧州（EU）在住</label>
+          <label><input type="radio" name="region" value="その他の国に在住">その他の国に在住</label>
+        </div>
+      </div>
+      <div class="field">
+        <label for="f-note">ご一緒に参加される方・ご質問など</label>
+        <p class="help">ご家族・ご夫婦で参加される場合は、人数と、お子さんがいらっしゃる場合は年齢をお書きください。</p>
+        <textarea id="f-note" name="note" rows="3"></textarea>
+      </div>
+      <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;" aria-hidden="true">
+      <div class="field">
+        <div class="check">
+          <input type="checkbox" id="agree" required>
+          <label for="agree">このページの「わかっていること」と「キャンセルポリシー」、<a href="https://iobschool.github.io/iob-exam-prep-2026/privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>を確認し、内容に同意して申し込みます。（必須）</label>
+        </div>
+      </div>
+      <p class="paylead">お支払い方法を選んでください。<small>ボタンを押すと、お申し込み内容を送信します。お席確保代（前金）は€500（税込み）です。</small></p>
+      <div class="payopts">
+        <button type="submit" class="paybtn" data-method="Stripe"><b>カード（Stripe）で支払う</b><span>€500　そのままお支払いのページへ移動します</span></button>
+        <button type="submit" class="paybtn" data-method="PayPal"><b>PayPalで支払う</b><span>€500　そのままお支払いのページへ移動します</span></button>
+        <button type="submit" class="paybtn bank" data-method="銀行振込"><b>銀行振込で支払う</b><span>振込先をメールでお送りします</span></button>
+      </div>
+      <p class="formerr" id="formErr" role="alert" style="display:none;"></p>
+    </form>
+
+    <div id="payRedirect" class="done">
+      <p class="big">お申し込み内容を受け付けました。<br>お支払いのページへ移動します。</p>
+      <p>自動で移動しない場合は、下のボタンを押してください。</p>
+      <a id="payLink" class="cta" href="#" style="max-width:360px;margin:16px auto 0;">お支払いのページへ進む</a>
+    </div>
+    <div id="bankDone" class="done">
+      <p class="big">お申し込み内容を受け付けました。</p>
+      <p>振込先をご案内するメールを、ご入力いただいたアドレスへお送りしました。お振込みについては、メールに記載された内容をご確認ください。</p>
+      <p>メールが届かない場合は、迷惑メールのフォルダもご確認ください。</p>
+    </div>
+    <div id="fallback" class="done">
+      <p class="big">恐れ入ります。<br>あと一手間だけお願いします。</p>
+      <p>ただいま自動の送信が使えない状態です。下のボタンを押すと、入力した内容が入ったメールが開きます。そのまま送信していただければ、お申し込みを受け付けます。</p>
+      <a id="fallbackMail" class="cta" href="#" style="max-width:360px;margin:16px auto 0;">メールでお申し込みを送る</a>
+    </div>
+    <p class="contact">お問い合わせ：<a href="mailto:school@iob.bio">school@iob.bio</a></p>
   </div>
 </section>
 
 <section>
   <div class="wrap">
     <p class="eyebrow">写真をもっと</p>
-    <h2>タナホフと、仲間たちの写真。</h2>
+    <h2>タナホフと、<br>仲間たちの写真。</h2>
   </div>
 </section>
 <section>
@@ -210,12 +413,9 @@ footer{padding:36px 0 48px;text-align:center;font-size:12px;color:var(--sub)}
     <div class="masonry">
     <img src="img/y2026_group1.jpg" alt="2026年のツアーの集合写真" loading="lazy" decoding="async">
     <img src="img/y2026_group3.jpg" alt="2026年のツアーの集合写真" loading="lazy" decoding="async">
-    <img src="img/y2026_311.jpg" alt="" loading="lazy" decoding="async">
     <img src="img/y2026_144.jpg" alt="" loading="lazy" decoding="async">
     <img src="img/y2026_291.jpg" alt="" loading="lazy" decoding="async">
-    <img src="img/y2026_187.jpg" alt="" loading="lazy" decoding="async">
     <img src="img/y2026_020.jpg" alt="" loading="lazy" decoding="async">
-    <img src="img/y2026_021.jpg" alt="" loading="lazy" decoding="async">
     <img src="img/y2026_023.jpg" alt="" loading="lazy" decoding="async">
     <img src="img/y2026_028.jpg" alt="" loading="lazy" decoding="async">
     <img src="img/y2026_035.jpg" alt="" loading="lazy" decoding="async">
@@ -246,7 +446,6 @@ footer{padding:36px 0 48px;text-align:center;font-size:12px;color:var(--sub)}
     <img src="img/y2018_028.jpg" alt="" loading="lazy" decoding="async">
     <img src="img/y2018_036.jpg" alt="" loading="lazy" decoding="async">
     <img src="img/y2018_052.jpg" alt="" loading="lazy" decoding="async">
-    <img src="img/y2018_058.jpg" alt="" loading="lazy" decoding="async">
     <img src="img/y2018_062.jpg" alt="" loading="lazy" decoding="async">
     <img src="img/y2018_063.jpg" alt="" loading="lazy" decoding="async">
     <img src="img/y2018_076.jpg" alt="" loading="lazy" decoding="async">
@@ -255,7 +454,6 @@ footer{padding:36px 0 48px;text-align:center;font-size:12px;color:var(--sub)}
     </div>
     <p class="year">2019年</p>
     <div class="masonry">
-    <img src="img/y2019_044.jpg" alt="" loading="lazy" decoding="async">
     <img src="img/y2019_032.jpg" alt="" loading="lazy" decoding="async">
     <img src="img/y2019_002.jpg" alt="" loading="lazy" decoding="async">
     <img src="img/y2019_006.jpg" alt="" loading="lazy" decoding="async">
@@ -275,9 +473,86 @@ footer{padding:36px 0 48px;text-align:center;font-size:12px;color:var(--sub)}
   </div>
 </section>
 
+<div id="stickyCta"><a href="#apply">お申し込みはこちら</a></div>
+
 <footer>
-  © オーガニック未来会議 / Institut für Organic Business GmbH
+  © オーガニック未来会議 / Institut für Organic Business GmbH<br>
+  お問い合わせ：school@iob.bio
 </footer>
+
+<script>
+  // 申込受付＝ページ内フォーム → 受付GAS（有料申込_2026の「未来会議ツアー2027」タブに記録・申込者へ自動返信・hi@iob.bio へ通知）
+  // → カード・PayPalはそのまま決済ページへ／銀行振込は完了画面（振込先は自動返信メール）
+  var GAS_URL = "";
+  // お席確保代€500の決済ページ（日本在住・欧州在住とも同額）。URLが空のあいだ、そのボタンは表示しない
+  var PAY_LINKS = { Stripe: "", PayPal: "" };
+  var SRC = (function(){
+    var s = (new URLSearchParams(location.search).get("src") || "").toLowerCase().replace(/[^a-z0-9_-]/g, "").slice(0, 20);
+    try { if (s) sessionStorage.setItem("fc27_src", s); else s = sessionStorage.getItem("fc27_src") || ""; } catch (e) {}
+    return s || "direct";
+  })();
+
+  var form = document.getElementById("applyForm");
+  var btns = [].slice.call(form.querySelectorAll(".paybtn"));
+  btns.forEach(function(b){ var m = b.getAttribute("data-method"); if (m !== "銀行振込" && !PAY_LINKS[m]) b.style.display = "none"; });
+  var errBox = document.getElementById("formErr");
+  function showErr(msg){ errBox.textContent = msg; errBox.style.display = "block"; errBox.scrollIntoView({behavior:"smooth", block:"center"}); }
+  function show(id){ form.style.display = "none"; var el = document.getElementById(id); el.style.display = "block"; el.scrollIntoView({behavior:"smooth", block:"center"}); }
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    errBox.style.display = "none";
+    var sub = e.submitter || document.activeElement;
+    var method = sub && sub.getAttribute ? sub.getAttribute("data-method") : "";
+    var name = form.name.value.trim(), roman = form.roman.value.trim(), email = form.email.value.trim(), address = form.address.value.trim(), note = form.note.value.trim();
+    var r = form.querySelector('input[name="region"]:checked'), region = r ? r.value : "";
+    if (!name || !roman || !address || !email) { showErr("お名前・ローマ字・ご住所・メールアドレスを入力してください。"); return; }
+    if (!/^[A-Za-z][A-Za-z ,.'\-]*$/.test(roman)) { showErr("お名前のローマ字は、英字でお書きください。"); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showErr("メールアドレスの形を確かめてください。"); return; }
+    if (!region) { showErr("お住まいの地域を選んでください。"); return; }
+    if (!document.getElementById("agree").checked) { showErr("キャンセルポリシーなどへの同意にチェックを入れてください。"); return; }
+    if (form.website.value) return; // 自動送信よけ
+    var isBank = method === "銀行振込";
+    var link = isBank ? "" : PAY_LINKS[method];
+    if (!method || (!isBank && !link)) { showErr("お支払い方法のボタンを押してください。"); return; }
+    btns.forEach(function(b){ b.disabled = true; });
+
+    var data = { name: name, roman: roman, email: email, address: address, region: region, method: method, note: note, agree: true, src: SRC, website: "" };
+
+    function done(){
+      if (isBank) { show("bankDone"); return; }
+      document.getElementById("payLink").href = link;
+      show("payRedirect");
+      setTimeout(function(){ window.location.href = link; }, 900);
+    }
+    function fallback(){
+      var body = "オーガニック未来会議2027（タナホフ）に申し込みます。\n\nお名前：" + name + "\nローマ字：" + roman + "\nご住所：" + address + "\nメールアドレス：" + email + "\nお住まいの地域：" + region + "\nお支払い方法：" + method + "\nご一緒に参加される方・ご質問：" + note + "\nキャンセルポリシーに同意します。\n";
+      document.getElementById("fallbackMail").href = "mailto:school@iob.bio?subject=" + encodeURIComponent("オーガニック未来会議2027 お申し込み（" + name + "）") + "&body=" + encodeURIComponent(body);
+      show("fallback");
+    }
+    if (!GAS_URL || GAS_URL.indexOf("http") !== 0) { fallback(); return; }
+
+    // 保存の応答を待つ（最大3秒）。keepalive付きなので、ページを離れても送信は続く
+    var body = new URLSearchParams({ payload: JSON.stringify(data) });
+    var timer = new Promise(function(res){ setTimeout(function(){ res("timeout"); }, 3000); });
+    var send = fetch(GAS_URL, { method: "POST", mode: "no-cors", keepalive: true, headers: { "Content-Type": "application/x-www-form-urlencoded;charset=utf-8" }, body: body }).then(function(){ return "ok"; });
+    Promise.race([send, timer]).then(function(){ done(); }).catch(function(){ fallback(); });
+  });
+
+  // 追従ボタン（スマホ）：ファーストビューを過ぎたら出す／申込欄が見えたら引っ込める
+  (function(){
+    var bar = document.getElementById("stickyCta"), sec = document.getElementById("apply");
+    document.body.classList.add("has-sticky");
+    function update(){
+      var past = window.scrollY > window.innerHeight * 0.9;
+      var r = sec.getBoundingClientRect();
+      bar.classList.toggle("on", past && !(r.top < window.innerHeight && r.bottom > 0));
+    }
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    update();
+  })();
+</script>
 
 </body>
 </html>
