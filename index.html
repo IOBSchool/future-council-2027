@@ -265,7 +265,7 @@ footer{padding:36px 0 48px;text-align:center;font-size:12px;color:var(--sub)}
         <dt>どんな会</dt><dd>招待制のオーガニック未来会議。来年から月1回オンラインで集まり、夏にタナホフで夢の発表会をして、最終日に次の一年の宣言をします</dd>
         <dt>人数</dt><dd>少人数で開催します。目安は10名です</dd>
         <dt>参加費<br>（早割）</dt><dd><span class="price">€2,360</span><span class="note">2026年12月31日までに、お席確保代（前金）€500をお支払いの方が対象です</span></dd>
-        <dt>参加費<br>（一般価格）</dt><dd><span class="price">€2,510</span><span class="note">どちらも税込みです。日本在住の方も、欧州在住の方も、同じ金額です</span></dd>
+        <dt>参加費<br>（一般価格）</dt><dd><span class="price">€2,510</span><span class="note">どちらも税込みです</span></dd>
         <dt>含まれるもの</dt><dd><span class="note" style="margin-top:0">5泊6日の滞在期間にかかるすべての経費を含みます（飲み物を除く）</span><span class="note">ミュンヘン空港からの電車移動を含みます</span><span class="note">航空券は含みません</span><span class="note">ご家族・ご夫婦の場合は、金額をお出しします</span></dd>
         <dt>お席確保代<br>（前金）</dt><dd><span class="price">€500</span><span class="note">お申し込みのときにお支払いいただきます。お支払いが完了した時点で、お申し込みが確定します</span><span class="note">参加費の一部として、残金から差し引きます</span></dd>
         <dt>残金</dt><dd><span class="note" style="margin-top:0">2027年5月末までにお支払いください</span><span class="note">早割の方は€1,860、一般価格の方は€2,010です</span></dd>
@@ -326,7 +326,7 @@ footer{padding:36px 0 48px;text-align:center;font-size:12px;color:var(--sub)}
     <h2>お申し込みと、<br>お席確保代（前金）の<br>お支払い</h2>
     <ol class="steps">
       <li><span class="no">1</span><div>お名前・ご住所・メールアドレスを入力します</div></li>
-      <li><span class="no">2</span><div>お住まいの地域を選び、キャンセルポリシーに同意して、お支払い方法のボタンを押します</div></li>
+      <li><span class="no">2</span><div>キャンセルポリシーに同意して、お支払い方法のボタンを押します</div></li>
       <li><span class="no">3</span><div>お席確保代（前金）€500をお支払いいただきます<small>カード・PayPalの方は、そのままお支払いのページへ移動します。銀行振込の方には、振込先をメールでお送りします。お支払いが完了した時点で、お申し込みが確定します。</small></div></li>
     </ol>
 
@@ -349,14 +349,6 @@ footer{padding:36px 0 48px;text-align:center;font-size:12px;color:var(--sub)}
         <label for="f-email">メールアドレス<span class="req">必須</span></label>
         <p class="help">お支払いの確認や、旅の大切なご連絡を、このアドレスへお送りします。</p>
         <input type="email" id="f-email" name="email" autocomplete="email" required>
-      </div>
-      <div class="field">
-        <span class="lbl">お住まいの地域<span class="req">必須</span></span>
-        <div class="radios">
-          <label><input type="radio" name="region" value="日本在住" required>日本在住</label>
-          <label><input type="radio" name="region" value="欧州（EU）在住">欧州（EU）在住</label>
-          <label><input type="radio" name="region" value="その他の国に在住">その他の国に在住</label>
-        </div>
       </div>
       <div class="field">
         <label for="f-note">ご一緒に参加される方・ご質問など</label>
@@ -505,11 +497,10 @@ footer{padding:36px 0 48px;text-align:center;font-size:12px;color:var(--sub)}
     var sub = e.submitter || document.activeElement;
     var method = sub && sub.getAttribute ? sub.getAttribute("data-method") : "";
     var name = form.name.value.trim(), roman = form.roman.value.trim(), email = form.email.value.trim(), address = form.address.value.trim(), note = form.note.value.trim();
-    var r = form.querySelector('input[name="region"]:checked'), region = r ? r.value : "";
+    var region = "日本在住"; // このツアーは日本在住の方向け（本人 2026-10-22）
     if (!name || !roman || !address || !email) { showErr("お名前・ローマ字・ご住所・メールアドレスを入力してください。"); return; }
     if (!/^[A-Za-z][A-Za-z ,.'\-]*$/.test(roman)) { showErr("お名前のローマ字は、英字でお書きください。"); return; }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showErr("メールアドレスの形を確かめてください。"); return; }
-    if (!region) { showErr("お住まいの地域を選んでください。"); return; }
     if (!document.getElementById("agree").checked) { showErr("キャンセルポリシーなどへの同意にチェックを入れてください。"); return; }
     if (form.website.value) return; // 自動送信よけ
     var isBank = method === "銀行振込";
@@ -526,7 +517,7 @@ footer{padding:36px 0 48px;text-align:center;font-size:12px;color:var(--sub)}
       setTimeout(function(){ window.location.href = link; }, 900);
     }
     function fallback(){
-      var body = "オーガニック未来会議2027（タナホフ）に申し込みます。\n\nお名前：" + name + "\nローマ字：" + roman + "\nご住所：" + address + "\nメールアドレス：" + email + "\nお住まいの地域：" + region + "\nお支払い方法：" + method + "\nご一緒に参加される方・ご質問：" + note + "\nキャンセルポリシーに同意します。\n";
+      var body = "オーガニック未来会議2027（タナホフ）に申し込みます。\n\nお名前：" + name + "\nローマ字：" + roman + "\nご住所：" + address + "\nメールアドレス：" + email + "\nお支払い方法：" + method + "\nご一緒に参加される方・ご質問：" + note + "\nキャンセルポリシーに同意します。\n";
       document.getElementById("fallbackMail").href = "mailto:school@iob.bio?subject=" + encodeURIComponent("オーガニック未来会議2027 お申し込み（" + name + "）") + "&body=" + encodeURIComponent(body);
       show("fallback");
     }
