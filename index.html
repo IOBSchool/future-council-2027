@@ -59,6 +59,25 @@ p:last-child{margin-bottom:0}
 .masonry img{width:100%;margin-bottom:8px;border-radius:6px;break-inside:avoid;display:block;background:#eee}
 .year{font-family:'Zen Old Mincho',serif;font-weight:700;font-size:20px;margin:28px 12px 4px;color:var(--sub)}
 @media (min-width:720px){.masonry{column-count:3}}
+.scenes{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:8px 0 8px}
+.scene{margin:0}
+.scene img{aspect-ratio:1/1;object-fit:cover;border-radius:8px;background:#eee}
+.scene.big{grid-column:1/3}
+.scene.big img{aspect-ratio:4/3}
+.scene figcaption{word-break:auto-phrase;font-size:13px;color:var(--sub);padding:6px 2px 4px;line-height:1.6}
+@media (min-width:720px){.scenes{grid-template-columns:1fr 1fr 1fr}.scene.big{grid-column:span 2}}
+
+/* 2026年の参加者の声 */
+.vcard{background:var(--card);border-radius:14px;padding:22px 20px;margin-bottom:14px;border:1px solid var(--line)}
+.vcard .hl{font-family:'Zen Old Mincho',serif;font-weight:700;font-size:20px;line-height:1.6;margin-bottom:12px;color:var(--title)}
+.vcard p{font-size:15px;line-height:1.9}
+.vcard .who{font-size:13px;color:var(--sub);margin-top:10px}
+.qbox{font-size:14px;color:var(--sub);border:1px dashed var(--line);border-radius:10px;padding:10px 14px;margin:4px 0 20px}
+
+/* Instagram */
+.igbox{max-width:420px;margin:20px auto 0}
+.igbox .instagram-media{margin:0 auto 18px !important;min-width:0 !important;width:100% !important}
+.iglink{display:block;text-align:center;border:2px solid var(--accent);color:var(--accent);font-weight:700;text-decoration:none;border-radius:999px;padding:12px 16px;margin:0 auto 12px;max-width:420px}
 
 /* quote */
 .voices{margin:28px 0}
@@ -173,12 +192,12 @@ footer{padding:36px 0 48px;text-align:center;font-size:12px;color:var(--sub)}
 <section>
   <div class="wrap">
     <p class="eyebrow">未来会議の流れ</p>
-    <h2>月に1回オンラインで。<br>夏はタナホフで。</h2>
+    <h2>2ヶ月に1回オンラインで。<br>夏はタナホフで。</h2>
     <ol class="flow">
       <li>
-        <span class="step">来年から</span>
-        <span class="ttl">月に1回、オンラインで会う</span>
-        夢を語り合い、仲間と作戦会議をする。<br>月に一度の、みんなの合流点です。
+        <span class="step">2027年1月から</span>
+        <span class="ttl">2ヶ月に1回、オンラインで会う</span>
+        夢を語り合い、仲間と作戦会議をする。<br>2ヶ月に一度の、みんなの合流点です。
       </li>
       <li>
         <span class="step">2027年6月28日〜7月3日</span>
@@ -203,6 +222,30 @@ footer{padding:36px 0 48px;text-align:center;font-size:12px;color:var(--sub)}
     <p>何もしない時間を選ぶことも、歓迎されています。</p>
     <div class="photo"><img src="img/y2026_311.jpg" alt="屋外プールのデッキで過ごす人たち" loading="lazy" decoding="async"></div>
     <p>2026年の夜は、満天の星に、その日の小さな喜びを感謝しました。</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">2026年の6日間</p>
+    <h2>ホテルの外にも、<br>出かけました。</h2>
+    <p>山を歩いて、野草を学んで、最後の日はミュンヘンの街へ。2026年は、こんな6日間でした。</p>
+  </div>
+  <div class="wrap wide">
+    <div class="scenes">
+      <figure class="scene big"><img src="img/y2026s_hike_view.jpg" alt="山を見わたす展望台に立つ仲間たち" loading="lazy" decoding="async"><figcaption>ガイドさんと、山のハイキングへ</figcaption></figure>
+      <figure class="scene"><img src="img/y2026s_hike_meadow.jpg" alt="青空の下、草原の道で手を振る仲間たち" loading="lazy" decoding="async"><figcaption>歩いたあとの、この青空</figcaption></figure>
+      <figure class="scene"><img src="img/y2026s_museum_meadow.jpg" alt="草原で話す仲間たち" loading="lazy" decoding="async"><figcaption>野草ワークショップの日</figcaption></figure>
+      <figure class="scene big"><img src="img/y2026s_museum_lunch.jpg" alt="山を背に、外のテーブルで昼食を囲む仲間たち" loading="lazy" decoding="async"><figcaption>山を見ながら、外でお昼ごはん</figcaption></figure>
+      <figure class="scene"><img src="img/y2026s_museum_house.jpg" alt="バイエルンの古い木造の農家" loading="lazy" decoding="async"><figcaption>バイエルンの古い農家</figcaption></figure>
+      <figure class="scene"><img src="img/y2026s_museum_kitchen.jpg" alt="古い農家の台所" loading="lazy" decoding="async"><figcaption>昔の暮らしの台所</figcaption></figure>
+      <figure class="scene"><img src="img/y2026s_museum_barn.jpg" alt="山のふもとの木の小屋" loading="lazy" decoding="async"><figcaption>山のふもとの小屋</figcaption></figure>
+      <figure class="scene"><img src="img/y2026s_museum_balcony.jpg" alt="木のバルコニーから景色を眺める仲間たち" loading="lazy" decoding="async"><figcaption>木のバルコニーから</figcaption></figure>
+      <figure class="scene"><img src="img/y2026s_train.jpg" alt="電車の中で笑う仲間たち" loading="lazy" decoding="async"><figcaption>電車の移動も、みんなで</figcaption></figure>
+      <figure class="scene"><img src="img/y2026s_munich_street.jpg" alt="ミュンヘンの街でポーズをとる仲間たち" loading="lazy" decoding="async"><figcaption>最後の日は、ミュンヘンへ</figcaption></figure>
+      <figure class="scene big"><img src="img/y2026s_munich_beergarden.jpg" alt="ビアガーデンで集合写真" loading="lazy" decoding="async"><figcaption>ビアガーデンで、乾杯</figcaption></figure>
+      <figure class="scene big"><img src="img/y2026s_fest_tent.jpg" alt="夏のお祭りの大きなテント" loading="lazy" decoding="async"><figcaption>夏のお祭りにも</figcaption></figure>
+    </div>
   </div>
 </section>
 
@@ -253,6 +296,69 @@ footer{padding:36px 0 48px;text-align:center;font-size:12px;color:var(--sub)}
   </div>
 </section>
 
+<section id="voices">
+  <div class="wrap">
+    <p class="eyebrow">2026年の参加者の声</p>
+    <h2>旅の最終日に、<br>一人ずつ聞きました。</h2>
+    <p class="qbox">聞いたこと：「この旅で、得たもの。手放したもの。」<br>インタビュー動画から、ご本人の言葉のまま文字にしました（言いよどみだけ整えています）。</p>
+    <div class="vcard">
+      <p class="hl">仕事の自分ではなく、<br>素の自分でいられた。</p>
+      <p>普段は仕事の自分で人と関わるけれど、ここでは本当に素の自分で、いろんなお話ができました。会社をやっているとか関係なく、私自身がどう過ごしたいか、どういたいかを、すごく尊重される場だったので、むちゃくちゃ居心地が良かったです。</p>
+      <p>手放したのは、仮面をかぶっている自分や、「こうあるべき」。自分そのものでいいんだなって。ここに来る直前にも、日本でちょうどそういうことを考えていて、まさにそういう時間になりました。</p>
+      <p class="who">2026年の参加者</p>
+    </div>
+    <div class="vcard">
+      <p class="hl">もっと自由に生きていいんだ、<br>もっと楽しんでいいんだ。</p>
+      <p>普段は、家のことや仕事に追われることがすごく多かったので、そこから一度自分を切り離して、自分とすごく向き合うことができました。こういうことに引っかかるんだ、なんで嫌なんだろう、まで考える時間が持てたのが、とても良かったです。</p>
+      <p>自然ってこんなに大きいんだ、自分ってこんなに自由でいいんだ。もっと広い視点で、もっと自由に生きていいんだ、もっと楽しんでいいんだって気が付いて、「しなければならない」を少し手放せたかなと思います。</p>
+      <p class="who">2026年の参加者</p>
+    </div>
+    <div class="vcard">
+      <p class="hl">もうすでに豊かさがあって、<br>その上で、自分がどう生きるか。</p>
+      <p>日本にいると、何かをしなきゃいけない、何かを頑張らないと幸せや豊かさにたどり着けない、という感覚がどうしてもあるんです。でも実はそうじゃなくて、もうすでに豊かさがあって、その上で自分がどう生きるか。この素晴らしい環境と自然の中に身を置いて、そう思いました。</p>
+      <p>自然を守っていきたい、地球を守っていきたい。それを皆さんと一緒に叶えていきたいし、こういう仲間がどんどん増えて、つながっていくことを期待しています。</p>
+      <p class="who">2026年の参加者</p>
+    </div>
+    <div class="vcard">
+      <p class="hl">初めて会ったとは思えないぐらい、<br>濃厚で楽しい時間。</p>
+      <p>初めてのビオホテル体験で、まず大切な仲間に出会えました。初めて会ったとは思えないぐらい、すごく濃厚で楽しい時間を過ごさせてもらって、すぐに打ち解けて仲良くなれたのが、本当に最大の得たものです。</p>
+      <p>海外で生きていく上で、知らないうちに背負っていたものと向き合えて、つらかった、苦しかったのが、少し和らいだような気がします。</p>
+      <p class="who">2026年の参加者</p>
+    </div>
+    <div class="vcard">
+      <p class="hl">「ねばねば星人」を、<br>手放しました。</p>
+      <p>「〜ねばならない」の、ねばねば星人を手放しました。得たのは、案外、自分の人生も残り少ないなと気づかせてもらったこと。これからは、自分が選択したもので生きていきたいなと思いました。</p>
+      <p>自分も、伝統を伝えられる日本の人になりたいなと決めました。</p>
+      <p class="who">2026年の参加者</p>
+    </div>
+    <div class="vcard">
+      <p class="hl">心が落ち着いていれば、<br>怖さや不安はなくなる。</p>
+      <p>目的にしていた「整う」を、楽しみながらできて、また明日から頑張ろうという気持ちにとてもなれるツアーでした。</p>
+      <p>手放したのは、いろんな面での恐怖心。心が落ち着いていれば、怖いとか不安だとかいう気持ちがなくなるな、という気持ちにさせていただきました。アクティビティもそろっていて、食事も健康になるような食事で、とても楽しい旅でした。</p>
+      <p class="who">2026年の参加者</p>
+    </div>
+    <div class="vcard">
+      <p class="hl">この先、何をするにも<br>基盤になるものが得られた。</p>
+      <p>見たものと、自分の体と、自分の実現とのつながりを感じることができたのが一番です。北海道とはまた違う土地で、暮らすように泊まれた。その貴重な体験で、私にとって今後、何をするにも基盤となる、基礎となるものが得られたんじゃないかなと思います。</p>
+      <p>本当に自分がどう生きるかが、ものすごく大切だと思っています。</p>
+      <p class="who">2026年の参加者</p>
+    </div>
+  </div>
+</section>
+
+<section class="sep">
+  <div class="wrap">
+    <p class="eyebrow">Instagramから</p>
+    <h2>2026年の旅を、<br>動画でも。</h2>
+    <p>旅から帰ってすぐに、私のInstagramで、仲間と過ごした時間と、そこで決めた来年からのことを書きました。</p>
+    <div class="igbox">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DbMJ9R9oyxl/" data-instgrm-version="14" style="background:#fff;border:0;border-radius:12px;margin:0 auto;max-width:420px;width:100%;"><a href="https://www.instagram.com/reel/DbMJ9R9oyxl/" target="_blank" rel="noopener">Instagramでリールを見る</a></blockquote>
+      <a class="iglink" href="https://www.instagram.com/reel/DbMJ9R9oyxl/" target="_blank" rel="noopener">Instagramでリールを見る</a>
+      <a class="iglink" href="https://www.instagram.com/p/DbIiSHuDbII/" target="_blank" rel="noopener">タナホフの投稿も見る</a>
+    </div>
+  </div>
+</section>
+
 <section id="info">
   <div class="wrap">
     <p class="eyebrow">2027年のこと</p>
@@ -262,7 +368,7 @@ footer{padding:36px 0 48px;text-align:center;font-size:12px;color:var(--sub)}
         <dt>日程</dt><dd>2027年6月28日（月）〜7月3日（土）　5泊6日</dd>
         <dt>集合</dt><dd>6月28日（月）朝8時　ミュンヘン空港</dd>
         <dt>場所</dt><dd>南ドイツ・バイエルン<br>ヨーロッパアルプスの麓　ビオホテル「タナホフ」</dd>
-        <dt>どんな会</dt><dd>招待制のオーガニック未来会議。来年から月1回オンラインで集まり、夏にタナホフで夢の発表会をして、最終日に次の一年の宣言をします</dd>
+        <dt>どんな会</dt><dd>招待制のオーガニック未来会議。2027年1月から2ヶ月に1回オンラインで集まり、夏にタナホフで夢の発表会をして、最終日に次の一年の宣言をします</dd>
         <dt>人数</dt><dd>少人数で開催します。目安は10名です</dd>
         <dt>参加費<br>（早割）</dt><dd><span class="price">€2,360</span><span class="note">2026年12月31日までに、お席確保代（前金）€500をお支払いの方が対象です</span></dd>
         <dt>参加費<br>（一般価格）</dt><dd><span class="price">€2,510</span><span class="note">どちらも税込みです</span></dd>
@@ -544,6 +650,7 @@ footer{padding:36px 0 48px;text-align:center;font-size:12px;color:var(--sub)}
     update();
   })();
 </script>
+<script async src="https://www.instagram.com/embed.js"></script>
 
 </body>
 </html>
