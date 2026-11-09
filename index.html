@@ -213,22 +213,46 @@ footer{padding:40px 20px 48px;text-align:center;font-size:12px;color:var(--sub);
 .letter .sign{font-family:var(--serif);font-weight:700;text-align:right;color:var(--ink);margin-top:28px}
 .caution{background:#fff6ec;border:1px solid #f0c9a6;border-radius:6px;padding:16px 18px;font-size:14.5px;color:var(--ink)}
 .iglead{margin-top:30px;font-size:14px;color:var(--sub);text-align:center}
+
+/* FV v4（2026-11-09 横山4往復目） */
+.hero2{background:var(--linen);padding:18px 0 26px;text-align:center}
+.h2-eyebrow{font-size:12px;letter-spacing:.14em;color:var(--moss);font-weight:700;margin-bottom:8px}
+.hero2 h1{font-size:clamp(23px,6.6vw,40px);line-height:1.5;letter-spacing:.03em;margin:0 0 10px}
+.h2-sub{font-size:14px;line-height:1.8;color:var(--text);margin:0 auto 14px;max-width:30em;text-align:left}
+.h2-photo{margin:0 0 12px}
+.h2-photo img{height:clamp(150px,23svh,300px);width:100%;object-fit:cover;object-position:50% 50%}
+.h2-proof{font-size:13.5px;line-height:1.75;text-align:left;background:var(--paper);border-left:3px solid var(--accent);border-radius:4px;padding:9px 12px;margin:0 0 10px}
+.h2-proof span{color:var(--sub)}
+.h2-proof b{display:block;color:var(--ink);font-size:14px;letter-spacing:0;margin-bottom:2px}
+.h2-proof span{display:block;font-size:12.5px;line-height:1.7}
+.h2-flowlead{font-size:12px;color:var(--sub);margin:0 0 2px;letter-spacing:.04em}
+.h2-flow{font-size:12.5px;line-height:1.6;color:var(--forest);font-weight:700;margin:0 0 6px;letter-spacing:.02em}
+.h2-flow i{font-style:normal;color:var(--moss);margin:0 4px}
+.h2-flow span{white-space:nowrap}
+.h2-facts{font-size:12.5px;color:var(--sub);letter-spacing:.06em;margin:0}
+.h2-btn{margin-top:12px !important;padding:13px 20px !important}
 </style>
 </head>
 <body>
 
-<header class="hero">
-  <div class="hero-photo"><img src="img/y2026_020_hero.jpg" alt="タナホフのテラスから見た、アルプスの谷と村（2026年）" fetchpriority="high"></div>
-  <div class="hero-body wrap">
-    <p class="latin">Tannerhof · Bayrischzell · Bayern</p>
-    <h1>来年の夢を、<br>仲間と、あの森で。</h1>
-    <p class="dates"><b>28.06 – 03.07.2027</b>オーガニック未来会議 2027<br>南ドイツ・バイエルン<br>ヨーロッパアルプスの麓<br>ビオホテル「タナホフ」<br>5泊6日・招待制</p>
-    <a class="btn" href="#apply">お申し込みはこちら</a>
+<header class="hero2">
+  <div class="wrap">
+    <p class="h2-eyebrow">ご招待｜オーガニック未来会議 2027</p>
+    <h1>「いつかやりたい」が、<br>来年の仕事と暮らしになる。</h1>
+    <p class="h2-sub">自然を大切にする仲間と、南ドイツのビオホテル<span class="nw">「タナホフ」</span>で来年の夢を言葉にし、帰ってからの<span class="nw">一年の方向</span>を決める。招待制の会です。</p>
+  </div>
+  <div class="h2-photo"><img src="img/y2026_023_fv.jpg" alt="タナホフのバルコニーで、アルプスの山を眺める2026年の仲間たち" fetchpriority="high"></div>
+  <div class="wrap">
+    <p class="h2-proof"><b>帰国後、新しい挑戦の準備を始めた人がいます。</b><span>2026年の参加者の一人。地域の教育と、オーガニックのお店を掛け合わせた取り組みです。</span></p>
+    <p class="h2-flowlead">語って終わらせず、次の一年へつなぐ仕組み</p>
+    <p class="h2-flow"><span>2ヶ月ごとのオンライン</span><i>→</i><span>夏の夢の発表会</span><i>→</i><span>次の一年の宣言</span></p>
+    <p class="h2-facts">2027.6.28–7.3｜南ドイツ・5泊6日｜招待制</p>
+    <a class="btn h2-btn" href="#invite">この旅で持ち帰るものを見る</a>
   </div>
 </header>
 
 <!-- 1章：招待 -->
-<section class="band-paper">
+<section id="invite" class="band-paper">
   <div class="wrap">
     <p class="eyebrow c">ご招待</p>
     <h2 class="c">あなたに、<br>声をかけた理由。</h2>
