@@ -2,236 +2,311 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
 <title>オーガニック未来会議 2027｜タナホフ</title>
 <meta name="description" content="2027年6月28日〜7月3日、南ドイツのビオホテル「タナホフ」で開くオーガニック未来会議へのご招待です。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Old+Mincho:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500&family=Noto+Sans+JP:wght@400;500;700&family=Zen+Old+Mincho:wght@500;700&display=swap" rel="stylesheet">
 <style>
+/* 世界観：アルプスの麓の森と木と麻。写真が主役、文字は余白の中に静かに置く。
+   色＝森の深緑・麻の生成り・木の茶。オレンジは申込ボタンだけ。黄色は各画面1か所の蛍光ペンだけ。 */
 :root{
-  --accent:#f26b3b; --title:#553727; --bg:#f9f7ef; --blue:#0085c9; --sub:#85634b;
-  --card:#ffffff; --line:#e6dfd0;
+  color-scheme: light;
+  --linen:#f5f1e8; --paper:#fffdf8; --mist:#e8ece3;
+  --forest:#1f3326; --forest2:#2d4636; --moss:#7f8f6a;
+  --ink:#2a2119; --text:#4a3b2e; --sub:#7b6a58; --line:#e2d9c7;
+  --accent:#e8743c; --accent-d:#cf5f2b; --mark:#ffe066;
+  --serif:'Zen Old Mincho','Hiragino Mincho ProN','Yu Mincho',serif;
+  --sans:'Noto Sans JP','Hiragino Sans','Yu Gothic',sans-serif;
+  --latin:'Cormorant Garamond','Times New Roman',serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--title);font-family:'Noto Sans JP',sans-serif;font-size:16px;line-height:1.95;-webkit-text-size-adjust:100%}
-img{display:block;width:100%;height:auto}
-.serif{font-family:'Zen Old Mincho',serif}
-.wrap{max-width:720px;margin:0 auto;padding:0 20px}
-section{padding:64px 0}
-h1,h2{font-family:'Zen Old Mincho',serif;font-weight:700;line-height:1.55}
-h2{font-size:26px;margin-bottom:24px}
-.eyebrow{font-size:13px;letter-spacing:.18em;color:var(--accent);font-weight:700;margin-bottom:14px}
-p{margin-bottom:1.1em;word-break:auto-phrase;text-wrap:pretty}
+body{background:var(--linen);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.95;letter-spacing:.03em;-webkit-text-size-adjust:100%;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;width:100%;max-width:100%;height:auto}
+budoux-ja{display:inline;line-break:strict}
+.nw{white-space:nowrap}
+mark{background:linear-gradient(transparent 58%,var(--mark) 58%);color:inherit;font-weight:700;padding:0 1px}
+
+.wrap{max-width:680px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.wide{max-width:1040px;margin:0 auto;padding-left:max(10px,env(safe-area-inset-left,0px));padding-right:max(10px,env(safe-area-inset-right,0px))}
+section{padding-block:72px}
+.band-paper{background:var(--paper)}
+.band-mist{background:var(--mist)}
+.band-forest{background:var(--forest);color:#e9e4d8}
+
+.latin{font-family:var(--latin);font-style:italic;font-weight:500;letter-spacing:.06em;color:var(--moss);font-size:17px;line-height:1.4}
+.eyebrow{font-size:12.5px;letter-spacing:.2em;color:var(--moss);font-weight:700;margin-bottom:10px}
+.band-forest .eyebrow,.band-forest .latin{color:#b9c6a6}
+h1,h2,h3{font-family:var(--serif);font-weight:700;color:var(--ink);text-wrap:balance}
+h2{font-size:clamp(23px,6.2vw,31px);line-height:1.6;margin-bottom:26px;letter-spacing:.04em}
+.band-forest h2{color:#fbf8f1}
+p{margin-bottom:1.25em;text-wrap:pretty}
 p:last-child{margin-bottom:0}
+.c{text-align:center}
 
-/* hero（写真の上に文字を重ねない：写真→その下に見出し） */
-.hero{background:var(--bg);color:var(--title)}
-.hero-img{height:58svh;min-height:300px;background:#ddd url('img/y2026_020.jpg') center/cover no-repeat}
-.hero .wrap{padding-top:36px;padding-bottom:44px}
-.hero h1{font-size:27px;margin-bottom:20px;word-break:auto-phrase}
-.hero .meta{font-size:15px;line-height:1.9;border-top:1px solid var(--line);padding-top:14px}
-.hero .meta span{display:block}
+/* ===== FV：写真を大きく、文字は写真の下（写真の上に文字を重ねない） ===== */
+.hero{background:var(--linen)}
+.hero-photo{position:relative;height:min(76svh,720px);min-height:360px;overflow:hidden}
+.hero-photo img{height:100%;object-fit:cover;object-position:center 60%}
+.hero-photo::after{content:"";position:absolute;inset:auto 0 0 0;height:22%;background:linear-gradient(transparent,var(--linen))}
+.hero-body{position:relative;margin-top:-34px;padding-bottom:56px;text-align:center}
+.hero-body .latin{font-size:18px}
+.hero h1{font-size:clamp(26px,7.4vw,46px);line-height:1.62;margin:16px 0 22px;letter-spacing:.05em}
+.hero .dates{display:inline-block;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 4px;font-size:15px;line-height:1.85;color:var(--text)}
+.hero .dates b{font-family:var(--latin);font-style:italic;font-weight:500;font-size:21px;letter-spacing:.08em;color:var(--ink);display:block}
+.btn{display:block;max-width:400px;margin:28px auto 0;text-align:center;background:var(--accent);color:#fff;font-weight:700;font-size:16px;text-decoration:none;border-radius:999px;padding:16px 20px;box-shadow:0 10px 26px rgba(232,116,60,.30)}
+.btn:hover{background:var(--accent-d)}
+.btn:focus-visible,.iglink:focus-visible,.policy summary:focus-visible{outline:3px solid var(--forest2);outline-offset:3px}
 
-/* intro */
-.lead{font-size:17px}
-.slogan{font-family:'Zen Old Mincho',serif;font-size:22px;font-weight:700;margin:28px 0;padding-left:16px;border-left:4px solid var(--accent)}
+/* ===== 招待 ===== */
+.lead{font-size:17px;color:var(--ink)}
+.slogan{font-family:var(--serif);font-size:clamp(21px,5.6vw,26px);font-weight:700;color:var(--forest);text-align:center;line-height:1.7;margin:34px 0}
 
-/* flow */
-.flow{list-style:none;margin-top:12px}
-.flow li{word-break:auto-phrase;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 20px 20px 20px;margin-bottom:14px}
-.flow .step{font-size:12px;letter-spacing:.14em;color:var(--accent);font-weight:700;display:block;margin-bottom:4px}
-.flow .ttl{font-family:'Zen Old Mincho',serif;font-size:19px;font-weight:700;display:block;margin-bottom:6px}
+/* ===== フィルム（横に流れる2026年の写真） ===== */
+.film{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px max(20px,env(safe-area-inset-left,0px)) 14px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.film::-webkit-scrollbar{display:none}
+.film figure{flex:0 0 74%;max-width:420px;scroll-snap-align:center;margin:0}
+.film img{aspect-ratio:4/5;object-fit:cover;border-radius:4px}
+.film figcaption{font-size:12.5px;color:var(--sub);padding-top:6px;letter-spacing:.06em}
+.film-hint{font-size:12px;color:var(--sub);text-align:right;padding-right:max(20px,env(safe-area-inset-right,0px));letter-spacing:.1em}
 
-/* photo blocks */
-.full{margin:0}
-.full img{height:70svh;object-fit:cover}
-.cap{word-break:auto-phrase;font-size:13px;color:var(--sub);padding:8px 20px 0;text-align:center}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:28px 0}
-.grid2 img{height:100%;object-fit:cover;aspect-ratio:3/4;border-radius:6px}
-.grid2 .wide{grid-column:1/3}
-.grid2 .wide img{aspect-ratio:4/3}
-.photo{border-radius:8px;overflow:hidden;margin:28px 0}
-.wide{max-width:1000px;margin:0 auto;padding:0 8px}
-.masonry{column-count:2;column-gap:8px;margin:12px 0 28px}
-.masonry img{width:100%;margin-bottom:8px;border-radius:6px;break-inside:avoid;display:block;background:#eee}
-.year{font-family:'Zen Old Mincho',serif;font-weight:700;font-size:20px;margin:28px 12px 4px;color:var(--sub)}
-@media (min-width:720px){.masonry{column-count:3}}
-.scenes{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:8px 0 8px}
+/* ===== 全幅の写真 ===== */
+.bleed{margin:0}
+.bleed img{height:min(68svh,620px);object-fit:cover}
+.bleed figcaption{font-size:12.5px;color:var(--sub);text-align:center;padding:8px 20px 0;letter-spacing:.06em}
+
+/* ===== 流れ（深緑の帯） ===== */
+.steps2{display:grid;gap:14px;margin-top:6px}
+.step{background:var(--forest2);border-radius:6px;padding:22px 20px;border:1px solid rgba(255,255,255,.08)}
+.step .when{font-size:12.5px;letter-spacing:.14em;color:#b9c6a6;font-weight:700}
+.step .ttl{display:block;font-family:var(--serif);font-size:20px;font-weight:700;color:#fbf8f1;margin:6px 0 8px;line-height:1.6}
+.step p{color:#ddd7c9;font-size:15px}
+.band-forest .photo img{border-radius:4px}
+@media (min-width:720px){.steps2{grid-template-columns:1fr 1fr}}
+
+/* ===== 写真と文 ===== */
+.photo{margin:30px 0}
+.photo img{border-radius:4px;aspect-ratio:4/3;object-fit:cover}
+.photo.tall img{aspect-ratio:4/5}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:30px 0}
+.duo img{aspect-ratio:3/4;object-fit:cover;border-radius:4px}
+.moment{margin:0 0 46px}
+.moment:last-child{margin-bottom:0}
+.moment .time{font-family:var(--latin);font-style:italic;font-size:20px;color:var(--moss);letter-spacing:.06em;margin-bottom:4px}
+
+/* ===== 2026年の6日間（モザイク） ===== */
+.scenes{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .scene{margin:0}
-.scene img{aspect-ratio:1/1;object-fit:cover;border-radius:8px;background:#eee}
+.scene img{aspect-ratio:1/1;object-fit:cover;border-radius:4px;background:var(--line)}
 .scene.big{grid-column:1/3}
 .scene.big img{aspect-ratio:4/3}
-.scene figcaption{word-break:auto-phrase;font-size:13px;color:var(--sub);padding:6px 2px 4px;line-height:1.6}
-@media (min-width:720px){.scenes{grid-template-columns:1fr 1fr 1fr}.scene.big{grid-column:span 2}}
+.scene figcaption{font-size:12.5px;color:var(--sub);padding:6px 2px 6px;line-height:1.6;letter-spacing:.04em}
+@media (min-width:720px){.scenes{grid-template-columns:repeat(3,1fr)}.scene.big{grid-column:span 2}}
 
-/* 2026年の参加者の声 */
-.vcard{background:var(--card);border-radius:14px;padding:22px 20px;margin-bottom:14px;border:1px solid var(--line)}
-.vcard .hl{font-family:'Zen Old Mincho',serif;font-weight:700;font-size:20px;line-height:1.6;margin-bottom:12px;color:var(--title)}
-.vcard p{font-size:15px;line-height:1.9}
-.vcard .who{font-size:13px;color:var(--sub);margin-top:10px}
-.qbox{font-size:14px;color:var(--sub);border:1px dashed var(--line);border-radius:10px;padding:10px 14px;margin:4px 0 20px}
+/* ===== 引用 ===== */
+.saying{font-family:var(--serif);font-weight:700;color:var(--forest);font-size:clamp(19px,5.2vw,23px);line-height:1.8;text-align:center;margin:34px 0}
+.saying::before,.saying::after{content:"";display:block;width:28px;height:1px;background:var(--moss);margin:0 auto 16px}
+.saying::after{margin:16px auto 0}
+.words{display:grid;gap:12px;margin:30px 0 10px}
+.words p{font-family:var(--serif);font-weight:700;font-size:clamp(18px,4.9vw,21px);color:var(--ink);background:var(--paper);border-radius:6px;padding:18px 20px;margin:0;line-height:1.7;text-align:center}
+.src{font-size:13px;color:var(--sub);text-align:center}
 
-/* Instagram */
-.igbox{max-width:420px;margin:20px auto 0}
+/* ===== 2026年の参加者の声 ===== */
+.qbox{font-size:14px;color:var(--sub);text-align:center;line-height:1.9;margin-bottom:30px}
+.qbox b{display:block;font-family:var(--serif);font-size:19px;color:var(--ink);margin-bottom:6px}
+.vcard{background:var(--paper);border-radius:6px;padding:26px 20px 22px;margin-bottom:16px;box-shadow:0 1px 0 var(--line)}
+.vcard .hl{font-family:var(--serif);font-weight:700;font-size:clamp(19px,5.2vw,22px);line-height:1.65;color:var(--forest);margin-bottom:16px}
+.vcard p{font-size:15px;line-height:2}
+.vcard .who{font-size:13px;color:var(--sub);margin-top:12px}
+.vphoto{margin:26px 0 30px}
+.vphoto img{border-radius:4px;aspect-ratio:3/2;object-fit:cover}
+
+/* ===== Instagram ===== */
+.igbox{max-width:420px;margin:24px auto 0}
 .igbox .instagram-media{margin:0 auto 18px !important;min-width:0 !important;width:100% !important}
-.iglink{display:block;text-align:center;border:2px solid var(--accent);color:var(--accent);font-weight:700;text-decoration:none;border-radius:999px;padding:12px 16px;margin:0 auto 12px;max-width:420px}
+.iglink{display:block;text-align:center;border:1.5px solid var(--forest2);color:var(--forest2);font-weight:700;text-decoration:none;border-radius:999px;padding:12px 16px;margin:0 auto 12px;max-width:420px}
 
-/* quote */
-.voices{margin:28px 0}
-.voices blockquote{font-family:'Zen Old Mincho',serif;font-size:20px;font-weight:700;background:var(--card);border-radius:12px;padding:18px 20px;margin-bottom:10px;border-left:4px solid var(--blue)}
-.voices .src{font-size:13px;color:var(--sub);margin-top:6px}
-
-/* info */
-.info{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px 20px;margin-top:8px}
-.info dl{display:grid;grid-template-columns:7em 1fr;gap:0}
-.info dt,.info dd{word-break:auto-phrase;padding:14px 0;border-bottom:1px solid var(--line)}
+/* ===== わかっていること ===== */
+.info{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:6px 20px;margin-top:8px}
+.info dl{display:grid;grid-template-columns:6.5em 1fr;gap:0}
+.info dt,.info dd{padding:14px 0;border-bottom:1px solid var(--line);min-width:0}
 .info dt{font-weight:700;color:var(--sub);font-size:14px}
 .info dd:last-of-type,.info dt:last-of-type{border-bottom:0}
-.tbd{color:var(--sub)}
-.price{display:block;font-family:'Zen Old Mincho',serif;font-weight:700;font-size:20px;line-height:1.7}
-.plink{display:inline-block;padding:14px 22px;border:2px solid var(--accent);border-radius:999px;color:var(--accent);font-weight:700;text-decoration:none}
-.sub{font-family:'Zen Old Mincho',serif;font-size:20px;margin:36px 0 12px}
+.price{display:block;font-family:var(--serif);font-weight:700;font-size:21px;line-height:1.7;color:var(--ink)}
 .note{display:block;font-size:14px;margin-top:6px}
-
-.reply{background:var(--title);color:#fff;border-radius:18px;padding:32px 24px;text-align:center}
-.reply p{margin-bottom:.8em}
-.reply .big{font-family:'Zen Old Mincho',serif;font-size:22px;font-weight:700}
+.sub{font-size:20px;margin:40px 0 12px}
 
 /* policy */
-.policy{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:4px 20px}
-.policy summary{cursor:pointer;font-weight:700;color:var(--accent);padding:14px 0;list-style:none}
+.policy{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:4px 20px}
+.policy summary{cursor:pointer;font-weight:700;color:var(--forest2);padding:14px 0;list-style:none}
 .policy summary::-webkit-details-marker{display:none}
 .policy summary::before{content:"＋ "}
 .policy[open] summary::before{content:"－ "}
-.policy h4{font-size:15px;margin:20px 0 6px;color:var(--title)}
+.policy h4{font-size:15px;margin:20px 0 6px;color:var(--ink)}
 .policy p,.policy li{font-size:14px}
 .policy ul{padding-left:1.3em;margin-bottom:1em}
 .policy[open]{padding-bottom:18px}
 .ctable{width:100%;border-collapse:collapse;font-size:14px;margin:8px 0}
-.ctable th,.ctable td{border:1px solid var(--line);padding:8px;text-align:left;vertical-align:top;word-break:auto-phrase}
-.ctable th{background:var(--bg);font-weight:700}
+.ctable th,.ctable td{border:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}
+.ctable th{background:var(--linen);font-weight:700}
 
 /* apply */
 .steps{list-style:none;margin:8px 0 20px}
 .steps li{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px}
-.steps .no{flex:0 0 28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:14px;margin-top:3px}
+.steps .no{flex:0 0 28px;height:28px;border-radius:50%;background:var(--forest2);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:14px;margin-top:3px}
 .steps small{display:block;font-size:13px;color:var(--sub)}
-.apform{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 20px;margin-top:8px}
+.apform{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:22px 20px;margin-top:8px}
 .field{margin-bottom:20px}
-.field label,.field .lbl{display:block;font-weight:700;margin-bottom:6px}
+.field label,.field .lbl{display:block;font-weight:700;margin-bottom:6px;color:var(--ink)}
 .req{display:inline-block;margin-left:8px;font-size:11px;color:#fff;background:var(--accent);border-radius:4px;padding:0 6px;vertical-align:2px}
 .help{font-size:13px;color:var(--sub);margin-bottom:6px}
-.field input[type=text],.field input[type=email],.field textarea{width:100%;font:inherit;font-size:16px;padding:12px;border:1px solid #cfc6b4;border-radius:8px;background:#fff;color:var(--title)}
-.radios{display:grid;gap:8px}
-.radios label{display:flex;gap:10px;align-items:center;font-weight:400;border:1px solid #cfc6b4;border-radius:8px;padding:12px;background:#fff}
-.radios input{width:20px;height:20px;accent-color:var(--accent)}
+.field input[type=text],.field input[type=email],.field textarea{width:100%;font:inherit;font-size:16px;padding:12px;border:1px solid #cfc6b4;border-radius:6px;background:#fff;color:var(--ink)}
 .check{display:flex;gap:10px;align-items:flex-start;font-size:14px}
 .check input{width:22px;height:22px;flex:0 0 22px;margin-top:3px;accent-color:var(--accent)}
 .check label{font-weight:400}
-.check a{color:var(--blue)}
-.paylead{font-weight:700;margin:8px 0 12px}
+.check a{color:var(--forest2)}
+.paylead{font-weight:700;margin:8px 0 12px;color:var(--ink)}
 .paylead small{display:block;font-weight:400;font-size:13px;color:var(--sub)}
 .payopts{display:grid;gap:10px}
-.paybtn{width:100%;font:inherit;border:0;border-radius:12px;background:var(--accent);color:#fff;padding:14px 16px;cursor:pointer;text-align:center;line-height:1.6}
+.paybtn{width:100%;font:inherit;border:0;border-radius:999px;background:var(--accent);color:#fff;padding:14px 16px;cursor:pointer;text-align:center;line-height:1.6}
 .paybtn b{display:block;font-size:17px}
 .paybtn span{display:block;font-size:13px;opacity:.95}
-.paybtn.bank{background:var(--title)}
+.paybtn.bank{background:var(--forest2)}
 .paybtn:disabled{opacity:.5}
-.formerr{color:#c0392b;font-weight:700;margin-top:12px}
+.formerr{color:#b5341f;font-weight:700;margin-top:12px}
 .done{display:none;text-align:center;padding:24px 6px}
-.done .big{font-family:'Zen Old Mincho',serif;font-size:20px;color:var(--accent);line-height:1.7;margin-bottom:12px}
+.done .big{font-family:var(--serif);font-size:20px;color:var(--forest);line-height:1.7;margin-bottom:12px}
 .cta{display:block;text-align:center;background:var(--accent);color:#fff;font-weight:700;text-decoration:none;border-radius:999px;padding:15px 20px}
 .contact{text-align:center;font-size:14px;margin-top:18px}
-.contact a{color:var(--blue)}
-#stickyCta{position:fixed;left:0;right:0;bottom:0;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(249,247,239,.96);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .25s;z-index:20}
+.contact a{color:var(--forest2)}
+
+/* ギャラリー */
+.masonry{column-count:2;column-gap:8px;margin:12px 0 8px}
+.masonry img{width:100%;margin-bottom:8px;border-radius:4px;break-inside:avoid;background:var(--line)}
+.year{font-family:var(--latin);font-style:italic;font-weight:500;font-size:24px;margin:30px 4px 6px;color:var(--moss);letter-spacing:.06em}
+@media (min-width:720px){.masonry{column-count:3}}
+
+/* 追従ボタン */
+#stickyCta{position:fixed;left:0;right:0;bottom:0;padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));background:rgba(245,241,232,.96);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .25s;z-index:20}
 #stickyCta.on{transform:none}
 #stickyCta a{display:block;max-width:420px;margin:0 auto;text-align:center;background:var(--accent);color:#fff;font-weight:700;text-decoration:none;border-radius:999px;padding:13px}
 body.has-sticky footer{padding-bottom:110px}
-footer{padding:36px 0 48px;text-align:center;font-size:12px;color:var(--sub)}
-.sep{background:#fff}
-@media (min-width:720px){
-  .hero h1{font-size:44px}
-  h2{font-size:30px}
-  .full img{height:520px}
-}
+footer{padding:40px 20px 48px;text-align:center;font-size:12px;color:var(--sub);background:var(--linen)}
+@media (min-width:720px){section{padding-block:96px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}#stickyCta{transition:none}}
 </style>
 </head>
 <body>
 
 <header class="hero">
-  <div class="hero-img" role="img" aria-label="タナホフの景色（2026年）"></div>
-  <div class="wrap">
-    <p class="eyebrow">オーガニック未来会議 2027</p>
+  <div class="hero-photo"><img src="img/y2026_023.jpg" alt="タナホフのバルコニーからアルプスの山を眺める仲間たち（2026年）" fetchpriority="high"></div>
+  <div class="hero-body wrap">
+    <p class="latin">Tannerhof · Bayrischzell · Bayern</p>
     <h1>来年の夢を、<br>仲間と育てる一年へ。<br>その夏を、タナホフで。</h1>
-    <p class="meta">
-      <span>2027年6月28日（月）〜7月3日（土）　5泊6日</span>
-      <span>南ドイツ・バイエルン　ヨーロッパアルプスの麓</span>
-      <span>ビオホテル「タナホフ」</span>
-      <span>招待制</span>
-    </p>
+    <p class="dates"><b>28.06 – 03.07.2027</b>オーガニック未来会議 2027<br>南ドイツ・バイエルン<br>ヨーロッパアルプスの麓<br>ビオホテル「タナホフ」<br>5泊6日・招待制</p>
+    <a class="btn" href="#apply">お申し込みはこちら</a>
   </div>
 </header>
 
-<section>
+<section class="band-paper">
   <div class="wrap">
-    <p class="eyebrow">ご招待</p>
-    <h2>来年の夢を、仲間と、あの森で。</h2>
+    <p class="eyebrow c">ご招待</p>
+    <h2 class="c">来年の夢を、<br>仲間と、あの森で。</h2>
     <p class="lead">オーガニック未来会議は、私からお声がけした人だけで集まる、招待制の会です。</p>
-    <p class="slogan">「オーガニックが、あたりまえ。」な社会へ。</p>
-    <p>そのために、まず私たち自身が、やりたいことを本気で語り合って、応援し合う。<br>
-    その場所に、あなたをお誘いしたくて、このページをつくりました。</p>
+    <p class="slogan">「オーガニックが、<br>あたりまえ。」な社会へ。</p>
+    <p>そのために、まず私たち自身が、やりたいことを本気で語り合って、応援し合う。</p>
+    <p>その場所に、あなたをお誘いしたくて、このページをつくりました。</p>
   </div>
 </section>
 
-<figure class="full"><img src="img/y2026_021.jpg" alt="タナホフの屋外プールと山" loading="lazy"></figure>
-<p class="cap">タナホフにて（2026年）</p>
+<div class="band-paper" style="padding-bottom:56px">
+  <div class="film" aria-label="2026年のタナホフの写真">
+    <figure><img src="img/y2026_020.jpg" alt="アルプスの麓の草原と村" decoding="async"><figcaption>麓の村</figcaption></figure>
+    <figure><img src="img/y2026_291.jpg" alt="ホテルの森の大きな木" decoding="async"><figcaption>ホテルの森の木</figcaption></figure>
+    <figure><img src="img/y2026_045.jpg" alt="森の道を歩く仲間たち" decoding="async"><figcaption>森の道</figcaption></figure>
+    <figure><img src="img/y2026_144.jpg" alt="草原に立つ木の小屋" decoding="async"><figcaption>草原の小屋</figcaption></figure>
+    <figure><img src="img/y2026_083.jpg" alt="夕食のテーブルを囲む仲間たち" decoding="async"><figcaption>夕食のテーブル</figcaption></figure>
+    <figure><img src="img/y2026_035.jpg" alt="山のふもとに建つタナホフ" decoding="async"><figcaption>タナホフ</figcaption></figure>
+  </div>
+  <p class="film-hint">2026年のタナホフ　→</p>
+</div>
 
-<section>
+<section class="band-forest">
   <div class="wrap">
     <p class="eyebrow">未来会議の流れ</p>
     <h2>2ヶ月に1回オンラインで。<br>夏はタナホフで。</h2>
-    <ol class="flow">
-      <li>
-        <span class="step">2027年1月から</span>
-        <span class="ttl">2ヶ月に1回、オンラインで会う</span>
-        夢を語り合い、仲間と作戦会議をする。<br>2ヶ月に一度の、みんなの合流点です。
-      </li>
-      <li>
-        <span class="step">2027年6月28日〜7月3日</span>
-        <span class="ttl">夏にタナホフで、夢の発表会</span>
-        来年の夢を見つめる時間を持って、みんなの前で発表します。<br>最終日に、次の一年の宣言をします。
-      </li>
-    </ol>
+    <div class="steps2">
+      <div class="step">
+        <span class="when">2027年1月から</span>
+        <span class="ttl">2ヶ月に1回、<br>オンラインで会う</span>
+        <p>夢を語り合い、仲間と作戦会議をする。</p>
+        <p>2ヶ月に一度の、みんなの合流点です。</p>
+      </div>
+      <div class="step">
+        <span class="when">2027年6月28日〜7月3日</span>
+        <span class="ttl">夏にタナホフで、<br>夢の発表会</span>
+        <p>来年の夢を見つめる時間を持って、みんなの前で発表します。</p>
+        <p>最終日に、次の一年の宣言をします。</p>
+      </div>
+    </div>
     <div class="photo"><img src="img/y2019_080.jpg" alt="湖のほとりに集まる仲間たち" loading="lazy" decoding="async"></div>
   </div>
 </section>
 
-<section class="sep">
+<section>
   <div class="wrap">
     <p class="eyebrow">タナホフで過ごす時間</p>
     <h2>朝から夜まで、<br>こんな時間が流れます。</h2>
-    <p>2026年の滞在では、毎朝、放牧された牛たちのカウベルの音で目を覚ましました。バルコニーから山を眺めて、一日をはじめました。</p>
-    <p>食事や飲み物は、ローカル＆オーガニックの食材が中心です。コスメなどの日用品、タオルやベッドリネンまで、可能なかぎりオーガニックで、倫理的に配慮されたものが使われています。</p>
-    <div class="photo"><img src="img/y2026_050.jpg" alt="テラスで昼食を囲む仲間たち" loading="lazy" decoding="async"></div>
-    <p>山を270度ぐるりと眺めながら泳げる、25メートルの屋外プール。サウナも、ジムもあります。プール、サウナ、ジムは、2027年の宿泊にも含まれます。</p>
-    <div class="photo"><img src="img/y2026_187.jpg" alt="山を望む屋外プール" loading="lazy" decoding="async"></div>
-    <p>ホテルには、ヨガ、ピラティス、ハイキング、アクアトレーニングなど、日替わりのアクティビティがあります。ヨガなど、ホテルの活動は、2027年も自由参加で使えます。</p>
-    <p>何もしない時間を選ぶことも、歓迎されています。</p>
-    <div class="photo"><img src="img/y2026_311.jpg" alt="屋外プールのデッキで過ごす人たち" loading="lazy" decoding="async"></div>
-    <p>2026年の夜は、満天の星に、その日の小さな喜びを感謝しました。</p>
+
+    <div class="moment">
+      <p class="time">Morning</p>
+      <p>2026年の滞在では、毎朝、放牧された牛たちのカウベルの音で目を覚ましました。バルコニーから山を眺めて、一日をはじめました。</p>
+      <div class="photo"><img src="img/y2026_021.jpg" alt="雲のかかるアルプスの山" loading="lazy" decoding="async"></div>
+    </div>
+
+    <div class="moment">
+      <p class="time">Table</p>
+      <p>食事や飲み物は、ローカル＆オーガニックの食材が中心です。</p>
+      <p>コスメなどの日用品、タオルやベッドリネンまで、可能なかぎりオーガニックで、倫理的に配慮されたものが使われています。</p>
+      <div class="duo">
+        <img src="img/y2026_073.jpg" alt="野菜たっぷりのサラダとスープ" loading="lazy" decoding="async">
+        <img src="img/y2026_046.jpg" alt="魚と野菜のひと皿" loading="lazy" decoding="async">
+      </div>
+      <div class="photo"><img src="img/y2026_050.jpg" alt="テラスで昼食を囲む仲間たち" loading="lazy" decoding="async"></div>
+    </div>
+
+    <div class="moment">
+      <p class="time">Pool &amp; Sauna</p>
+      <p>山を270度ぐるりと眺めながら泳げる、25メートルの屋外プール。サウナも、ジムもあります。</p>
+      <p>プール、サウナ、ジムは、2027年の宿泊にも含まれます。</p>
+      <div class="photo"><img src="img/y2026_187.jpg" alt="山を望む屋外プール" loading="lazy" decoding="async"></div>
+    </div>
+
+    <div class="moment">
+      <p class="time">Activities</p>
+      <p>ホテルには、ヨガ、ピラティス、ハイキング、アクアトレーニングなど、日替わりのアクティビティがあります。ヨガなど、ホテルの活動は、2027年も自由参加で使えます。</p>
+      <div class="photo"><img src="img/y2026_040.jpg" alt="ホテルのアトリエで絵を描く仲間たち" loading="lazy" decoding="async"></div>
+      <p>何もしない時間を選ぶことも、歓迎されています。</p>
+      <div class="photo"><img src="img/y2026_311.jpg" alt="屋外プールのデッキで過ごす人たち" loading="lazy" decoding="async"></div>
+    </div>
+
+    <div class="moment">
+      <p class="time">Night</p>
+      <p>2026年の夜は、満天の星に、その日の小さな喜びを感謝しました。</p>
+    </div>
   </div>
 </section>
 
-<section>
+<section class="band-mist">
   <div class="wrap">
     <p class="eyebrow">2026年の6日間</p>
     <h2>ホテルの外にも、<br>出かけました。</h2>
     <p>山を歩いて、野草を学んで、最後の日はミュンヘンの街へ。2026年は、こんな6日間でした。</p>
   </div>
-  <div class="wrap wide">
+  <div class="wide" style="margin-top:22px">
     <div class="scenes">
       <figure class="scene big"><img src="img/y2026s_hike_view.jpg" alt="山を見わたす展望台に立つ仲間たち" loading="lazy" decoding="async"><figcaption>ガイドさんと、山のハイキングへ</figcaption></figure>
       <figure class="scene"><img src="img/y2026s_hike_meadow.jpg" alt="青空の下、草原の道で手を振る仲間たち" loading="lazy" decoding="async"><figcaption>歩いたあとの、この青空</figcaption></figure>
@@ -252,32 +327,34 @@ footer{padding:36px 0 48px;text-align:center;font-size:12px;color:var(--sub)}
 <section>
   <div class="wrap">
     <p class="eyebrow">なぜ、夏をタナホフで</p>
-    <h2>私が、何度もここに戻る理由。</h2>
+    <h2>私が、何度も<br>ここに戻る理由。</h2>
     <p>タナホフがなぜいいのか。言葉にするのは、難しいです。</p>
-    <div class="voices">
-      <blockquote>「この場所に本当に何かが宿ってると感じるから、行った人だけがわかるというか」</blockquote>
-    </div>
-    <p>ここに来た人の中に、人生を変えていった人が、何人もいました。<br>
-    私自身も、ここに戻り続けることで、人生をよりいい形にできてきました。</p>
-    <p>最初に四角大輔さんと来た時と比べて、私は本当に成長しました。あの時想像していた人生とは、比べられないほどの自己実現を叶えてきました。</p>
-    <p>タナホフは、私が「私に戻る」場所です。2026年で、6回目の訪問になりました。</p>
+    <p class="saying">「この場所に本当に<br>何かが宿ってると感じるから、<br>行った人だけが<br>わかるというか」</p>
+    <p>ここに来た人の中に、人生を変えていった人が、何人もいました。</p>
+    <p>私自身も、ここに戻り続けることで、人生をよりいい形にできてきました。</p>
     <div class="photo"><img src="img/y2019_044.jpg" alt="夕方のタナホフの庭とホテル" loading="lazy" decoding="async"></div>
+    <p>最初に四角大輔さんと来た時と比べて、私は本当に成長しました。あの時想像していた人生とは、比べられないほどの自己実現を叶えてきました。</p>
+    <p>タナホフは、私が<mark>「私に戻る」場所</mark>です。2026年で、6回目の訪問になりました。</p>
   </div>
 </section>
 
-<section class="sep">
+<figure class="bleed"><img src="img/y2026_291.jpg" alt="ホテルの森の大きな木" loading="lazy" decoding="async"><figcaption>ホテルの森の木（2026年）</figcaption></figure>
+
+<section class="band-paper">
   <div class="wrap">
     <p class="eyebrow">タナホフという場所</p>
     <h2>100年前の療養所から、<br>今のタナホフへ。</h2>
-    <p>タナホフのはじまりは、約100年前。一人の医師が建てた療養所でした。<br>
-    自然の中で、食事・運動・休息を整える。その考え方は、今もホテルの在り方に受け継がれています。</p>
+    <p>タナホフのはじまりは、約100年前。一人の医師が建てた療養所でした。</p>
+    <p>自然の中で、食事・運動・休息を整える。その考え方は、今もホテルの在り方に受け継がれています。</p>
     <p>タナホフには「クナイプ原則」という考え方があり、体も心も魂も、すべてにアプローチする空間があります。</p>
-    <p>ホテルは、シュタイナー思想にもとづいて設計されています。お客さん同士の交流が生まれ、タナホフを応援する仲間へとつながっていく。一人で訪れても、同じ思いを持つ人との出会いが生まれる。そんなコミュニティが育つように設計されています。</p>
+    <div class="photo"><img src="img/y2018_058.jpg" alt="TANNERHOFの看板" loading="lazy" decoding="async"></div>
+    <p>ホテルは、シュタイナー思想にもとづいて設計されています。お客さん同士の交流が生まれ、タナホフを応援する仲間へとつながっていく。</p>
+    <p>一人で訪れても、同じ思いを持つ人との出会いが生まれる。そんなコミュニティが育つように設計されています。</p>
     <p>ホテルの森の木には、ホットスポットがあると、私は感じています。まわりに、結界が張られているような気さえします。</p>
     <p>いまは、「公共善経済」のモデル企業としても注目されています。会社の価値を、利益だけではなく、「みんなの幸せにどれだけ貢献したか」で考える経済のあり方です。</p>
-    <p>2019年まで、日本のサステナブルウェルネス業界で大きな影響力を持つ四角大輔さんと行ってきたビオホテルツアーでも、訪れてきた場所です。世界中のウェルネスホテルを巡ってきた大輔さんが「世界一」と話していたホテルでもあります。</p>
     <div class="photo"><img src="img/y2018_022.jpg" alt="ハイキングの途中で撮った仲間たちの集合写真" loading="lazy" decoding="async"></div>
-    <div class="photo"><img src="img/y2018_058.jpg" alt="TANNERHOFの看板" loading="lazy" decoding="async"></div>
+    <p>2019年まで、日本のサステナブルウェルネス業界で大きな影響力を持つ四角大輔さんと行ってきたビオホテルツアーでも、訪れてきた場所です。</p>
+    <p>世界中のウェルネスホテルを巡ってきた大輔さんが「世界一」と話していたホテルでもあります。</p>
   </div>
 </section>
 
@@ -286,80 +363,100 @@ footer{padding:36px 0 48px;text-align:center;font-size:12px;color:var(--sub)}
     <p class="eyebrow">ここで過ごした仲間の言葉</p>
     <h2>オーガニックだけでは、<br>説明しきれない場所。</h2>
     <p>この場所をいちばんよく表していたのは、2026年に一緒に訪れた仲間たちの言葉でした。</p>
-    <div class="voices">
-      <blockquote>「魂が戻る場所」</blockquote>
-      <blockquote>「はじめて来たのに、どこかで来たことがあると感じる場所」</blockquote>
-      <blockquote>「ここだけ温かい結界があると体感できる場所」</blockquote>
-      <p class="src">2026年のタナホフ・リトリートの参加者の声</p>
+    <div class="words">
+      <p>「魂が戻る場所」</p>
+      <p>「はじめて来たのに、<br>どこかで来たことがあると<br>感じる場所」</p>
+      <p>「ここだけ温かい結界があると<br>体感できる場所」</p>
     </div>
+    <p class="src">2026年のタナホフ・リトリートの参加者の声</p>
     <div class="photo"><img src="img/y2026_group2.jpg" alt="ラウンジに集まった2026年の仲間たち" loading="lazy" decoding="async"></div>
   </div>
 </section>
 
-<section id="voices">
+<section id="voices" class="band-mist">
   <div class="wrap">
-    <p class="eyebrow">2026年の参加者の声</p>
-    <h2>旅の最終日に、<br>一人ずつ聞きました。</h2>
-    <p class="qbox">聞いたこと：「この旅で、得たもの。手放したもの。」<br>インタビュー動画から、ご本人の言葉のまま文字にしました（言いよどみだけ整えています）。お名前は伏せています。</p>
+    <p class="eyebrow c">2026年の参加者の声</p>
+    <h2 class="c">旅の最終日に、<br>一人ずつ聞きました。</h2>
+    <p class="qbox"><b>「この旅で、得たもの。<br>手放したもの。」</b>インタビュー動画から、ご本人の言葉のまま<br>文字にしました（言いよどみだけ整えています）。<br>お名前は伏せています。</p>
+
     <div class="vcard">
       <p class="hl">仕事の自分ではなく、<br>素の自分でいられた。</p>
-      <p>普段は仕事の自分で人と関わるけれど、ここでは本当に素の自分で、いろんなお話ができました。会社をやっているとか関係なく、私自身がどう過ごしたいか、どういたいかを、すごく尊重される場だったので、むちゃくちゃ居心地が良かったです。</p>
-      <p>手放したのは、仮面をかぶっている自分や、「こうあるべき」。自分そのものでいいんだなって。ここに来る直前にも、日本でちょうどそういうことを考えていて、まさにそういう時間になりました。</p>
-      <p class="who">2026年の参加者</p>
+      <p>普段は仕事の自分で<br>人と関わるけれど、<br>ここでは本当に素の自分で、<br>いろんなお話ができました。</p>
+      <p>会社をやっているとか関係なく、<br>私自身がどう過ごしたいか、<br>どういたいかを、<br>すごく尊重される場だったので、<br><mark>むちゃくちゃ居心地が良かったです。</mark></p>
+      <p>手放したのは、<br>仮面をかぶっている自分や、<br><span class="nw">「こうあるべき」。</span><br>自分そのものでいいんだなって。</p>
+      <p>ここに来る直前にも、<br>日本でちょうど<br>そういうことを考えていて、<br>まさにそういう時間に<br>なりました。</p>
+      <p class="who">― 2026年の参加者</p>
     </div>
+
     <div class="vcard">
       <p class="hl">もっと自由に生きていいんだ、<br>もっと楽しんでいいんだ。</p>
-      <p>普段は、家のことや仕事に追われることがすごく多かったので、そこから一度自分を切り離して、自分とすごく向き合うことができました。こういうことに引っかかるんだ、なんで嫌なんだろう、まで考える時間が持てたのが、とても良かったです。</p>
-      <p>自然ってこんなに大きいんだ、自分ってこんなに自由でいいんだ。もっと広い視点で、もっと自由に生きていいんだ、もっと楽しんでいいんだって気が付いて、「しなければならない」を少し手放せたかなと思います。</p>
-      <p class="who">2026年の参加者</p>
+      <p>普段は、家のことや仕事に<br>追われることが<br>すごく多かったので、<br>そこから一度自分を切り離して、<br>自分とすごく<br>向き合うことができました。</p>
+      <p>こういうことに引っかかるんだ、<br>なんで嫌なんだろう、まで<br>考える時間が持てたのが、<br>とても良かったです。</p>
+      <p>自然ってこんなに大きいんだ、<br>自分ってこんなに<br>自由でいいんだ。</p>
+      <p>もっと広い視点で、<br>もっと自由に生きていいんだ、<br>もっと楽しんでいいんだって<br>気が付いて、<br><mark><span class="nw">「しなければならない」</span>を</mark><br><mark>少し手放せた</mark>かなと思います。</p>
+      <p class="who">― 2026年の参加者</p>
     </div>
+
     <div class="vcard">
-      <p class="hl">もうすでに豊かさがあって、<br>その上で、自分がどう生きるか。</p>
-      <p>日本にいると、何かをしなきゃいけない、何かを頑張らないと幸せや豊かさにたどり着けない、という感覚がどうしてもあるんです。でも実はそうじゃなくて、もうすでに豊かさがあって、その上で自分がどう生きるか。この素晴らしい環境と自然の中に身を置いて、そう思いました。</p>
-      <p>自然を守っていきたい、地球を守っていきたい。それを皆さんと一緒に叶えていきたいし、こういう仲間がどんどん増えて、つながっていくことを期待しています。</p>
-      <p class="who">2026年の参加者</p>
+      <p class="hl">もうすでに豊かさがあって、<br>その上で、<br>自分がどう生きるか。</p>
+      <p>日本にいると、<br>何かをしなきゃいけない、<br>何かを頑張らないと<br>幸せや豊かさに<br>たどり着けない、<br>という感覚が<br>どうしてもあるんです。</p>
+      <p>でも実はそうじゃなくて、<br><mark>もうすでに豊かさがあって、</mark><br>その上で自分がどう生きるか。<br>この素晴らしい環境と<br>自然の中に身を置いて、<br>そう思いました。</p>
+      <p>自然を守っていきたい、<br>地球を守っていきたい。<br>それを皆さんと一緒に<br>叶えていきたいし、<br>こういう仲間がどんどん増えて、<br>つながっていくことを<br>期待しています。</p>
+      <p class="who">― 2026年の参加者</p>
     </div>
+
+    <figure class="vphoto"><img src="img/y2026_group1.jpg" alt="2026年のツアーの集合写真" loading="lazy" decoding="async"></figure>
+
     <div class="vcard">
-      <p class="hl">初めて会ったとは思えないぐらい、<br>濃厚で楽しい時間。</p>
-      <p>初めてのビオホテル体験で、まず大切な仲間に出会えました。初めて会ったとは思えないぐらい、すごく濃厚で楽しい時間を過ごさせてもらって、すぐに打ち解けて仲良くなれたのが、本当に最大の得たものです。</p>
-      <p>知らないうちに背負っていたものと向き合えて、つらかった、苦しかったのが、少し和らいだような気がします。</p>
-      <p class="who">2026年の参加者</p>
+      <p class="hl">初めて会ったとは<br>思えないぐらい、<br>濃厚で楽しい時間。</p>
+      <p>初めてのビオホテル体験で、<br>まず大切な仲間に出会えました。</p>
+      <p>初めて会ったとは<br>思えないぐらい、<br>すごく濃厚で楽しい時間を<br>過ごさせてもらって、<br>すぐに打ち解けて<br>仲良くなれたのが、<br><mark>本当に最大の得たもの</mark>です。</p>
+      <p>知らないうちに<br>背負っていたものと向き合えて、<br>つらかった、苦しかったのが、<br>少し和らいだような気がします。</p>
+      <p class="who">― 2026年の参加者</p>
     </div>
+
     <div class="vcard">
-      <p class="hl">「ねばねば星人」を、<br>手放しました。</p>
-      <p>「〜ねばならない」の、ねばねば星人を手放しました。得たのは、案外、自分の人生も残り少ないなと気づかせてもらったこと。これからは、自分が選択したもので生きていきたいなと思いました。</p>
-      <p>自分も、伝統を伝えられる日本の人になりたいなと決めました。</p>
-      <p class="who">2026年の参加者</p>
+      <p class="hl"><span class="nw">「ねばねば星人」</span>を、<br>手放しました。</p>
+      <p><span class="nw">「〜ねばならない」</span>の、<br>ねばねば星人を手放しました。</p>
+      <p>得たのは、案外、<br>自分の人生も残り少ないなと<br>気づかせてもらったこと。<br>これからは、<br>自分が選択したもので<br><mark>生きていきたい</mark>なと思いました。</p>
+      <p>自分も、伝統を伝えられる<br>日本の人になりたいなと<br>決めました。</p>
+      <p class="who">― 2026年の参加者</p>
     </div>
+
+    <figure class="vphoto"><img src="img/y2026_group3.jpg" alt="テラスで食卓を囲む2026年の仲間たち" loading="lazy" decoding="async"></figure>
+
     <div class="vcard">
       <p class="hl">心が落ち着いていれば、<br>怖さや不安はなくなる。</p>
-      <p>目的にしていた「整う」を、楽しみながらできて、また明日から頑張ろうという気持ちにとてもなれるツアーでした。</p>
-      <p>手放したのは、いろんな面での恐怖心。心が落ち着いていれば、怖いとか不安だとかいう気持ちがなくなるな、という気持ちにさせていただきました。アクティビティもそろっていて、食事も健康になるような食事で、とても楽しい旅でした。</p>
-      <p class="who">2026年の参加者</p>
+      <p>目的にしていた<span class="nw">「整う」</span>を、<br>楽しみながらできて、<br>また明日から頑張ろうという<br>気持ちにとてもなれる<br>ツアーでした。</p>
+      <p>手放したのは、<br>いろんな面での恐怖心。<br><mark>心が落ち着いていれば、</mark><br>怖いとか不安だとかいう<br>気持ちがなくなるな、<br>という気持ちに<br>させていただきました。</p>
+      <p>アクティビティもそろっていて、<br>食事も健康になるような食事で、<br>とても楽しい旅でした。</p>
+      <p class="who">― 2026年の参加者</p>
     </div>
+
     <div class="vcard">
-      <p class="hl">この先、何をするにも<br>基盤になるものが得られた。</p>
-      <p>見たものと、自分の体と、自分の実現とのつながりを感じることができたのが一番です。いつもとは違う土地で、暮らすように泊まれた。その貴重な体験で、私にとって今後、何をするにも基盤となる、基礎となるものが得られたんじゃないかなと思います。</p>
-      <p>本当に自分がどう生きるかが、ものすごく大切だと思っています。</p>
-      <p class="who">2026年の参加者</p>
+      <p class="hl">この先、何をするにも<br>基盤になるものが<br>得られた。</p>
+      <p>見たものと、自分の体と、<br>自分の実現とのつながりを<br>感じることができたのが<br>一番です。</p>
+      <p>いつもとは違う土地で、<br>暮らすように泊まれた。<br>その貴重な体験で、<br>私にとって今後、<br>何をするにも<br><mark>基盤となる、基礎となるもの</mark>が<br>得られたんじゃないかなと<br>思います。</p>
+      <p>本当に自分がどう生きるかが、<br>ものすごく大切だと<br>思っています。</p>
+      <p class="who">― 2026年の参加者</p>
     </div>
   </div>
 </section>
 
-<section class="sep">
+<section class="band-paper">
   <div class="wrap">
-    <p class="eyebrow">Instagramから</p>
-    <h2>2026年の旅を、<br>動画でも。</h2>
+    <p class="eyebrow c">Instagramから</p>
+    <h2 class="c">2026年の旅を、<br>動画でも。</h2>
     <p>旅から帰ってすぐに、私のInstagramで、仲間と過ごした時間と、そこで決めた来年からのことを書きました。</p>
     <div class="igbox">
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DbMJ9R9oyxl/" data-instgrm-version="14" style="background:#fff;border:0;border-radius:12px;margin:0 auto;max-width:420px;width:100%;"><a href="https://www.instagram.com/reel/DbMJ9R9oyxl/" target="_blank" rel="noopener">Instagramでリールを見る</a></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DbMJ9R9oyxl/" data-instgrm-version="14" style="background:#fff;border:0;border-radius:6px;margin:0 auto;max-width:420px;width:100%;"><a href="https://www.instagram.com/reel/DbMJ9R9oyxl/" target="_blank" rel="noopener">Instagramでリールを見る</a></blockquote>
       <a class="iglink" href="https://www.instagram.com/reel/DbMJ9R9oyxl/" target="_blank" rel="noopener">Instagramでリールを見る</a>
       <a class="iglink" href="https://www.instagram.com/p/DbIiSHuDbII/" target="_blank" rel="noopener">タナホフの投稿も見る</a>
     </div>
   </div>
 </section>
 
-<section id="info">
+<section id="info" class="band-mist">
   <div class="wrap">
     <p class="eyebrow">2027年のこと</p>
     <h2>わかっていること</h2>
@@ -426,7 +523,7 @@ footer{padding:36px 0 48px;text-align:center;font-size:12px;color:var(--sub)}
 </section>
 
 
-<section id="apply" class="sep">
+<section id="apply" class="band-paper">
   <div class="wrap">
     <p class="eyebrow">お申し込み</p>
     <h2>お申し込みと、<br>お席確保代（前金）の<br>お支払い</h2>
@@ -498,16 +595,10 @@ footer{padding:36px 0 48px;text-align:center;font-size:12px;color:var(--sub)}
 
 <section>
   <div class="wrap">
-    <p class="eyebrow">写真をもっと</p>
-    <h2>タナホフと、<br>仲間たちの写真。</h2>
+    <p class="eyebrow c">2026年のタナホフ</p>
+    <h2 class="c">景色も、食卓も、<br>仲間も。</h2>
   </div>
-</section>
-<section>
-  <div class="wrap">
-    <p class="eyebrow">2026年のタナホフ</p>
-    <h2>景色も、食卓も、<br>仲間も。</h2>
-  </div>
-  <div class="wrap wide">
+  <div class="wide">
     <div class="masonry">
     <img src="img/y2026_group1.jpg" alt="2026年のツアーの集合写真" loading="lazy" decoding="async">
     <img src="img/y2026_group3.jpg" alt="2026年のツアーの集合写真" loading="lazy" decoding="async">
@@ -526,15 +617,16 @@ footer{padding:36px 0 48px;text-align:center;font-size:12px;color:var(--sub)}
   </div>
 </section>
 
-<section class="sep">
+<section class="band-paper">
   <div class="wrap">
-    <p class="eyebrow">これまでのツアーから</p>
-    <h2>初日の夜には、もう、<br>何年来の友だちみたいに。</h2>
-    <p>同じ食卓を囲んで、山を歩いて、夜は星を見ながら、これからやりたいことを本気で語り合う。<br>
-    自然の中にいると、人と人の距離って、こんなに早くほどけていくんだなと、いつも思います。</p>
+    <p class="eyebrow c">これまでのツアーから</p>
+    <h2 class="c">初日の夜には、もう、<br>何年来の友だちみたいに。</h2>
+    <p>同じ食卓を囲んで、山を歩いて、夜は星を見ながら、これからやりたいことを本気で語り合う。</p>
+    <p>自然の中にいると、人と人の距離って、こんなに早くほどけていくんだなと、いつも思います。</p>
+    <a class="btn" href="#apply">お申し込みはこちら</a>
   </div>
-  <div class="wrap wide">
-    <p class="year">2018年</p>
+  <div class="wide">
+    <p class="year">2018</p>
     <div class="masonry">
     <img src="img/y2018_001.jpg" alt="" loading="lazy" decoding="async">
     <img src="img/y2018_005.jpg" alt="" loading="lazy" decoding="async">
@@ -550,7 +642,7 @@ footer{padding:36px 0 48px;text-align:center;font-size:12px;color:var(--sub)}
     <img src="img/y2018_086.jpg" alt="" loading="lazy" decoding="async">
     <img src="img/past_2018.jpg" alt="" loading="lazy" decoding="async">
     </div>
-    <p class="year">2019年</p>
+    <p class="year">2019</p>
     <div class="masonry">
     <img src="img/y2019_032.jpg" alt="" loading="lazy" decoding="async">
     <img src="img/y2019_002.jpg" alt="" loading="lazy" decoding="async">
@@ -649,6 +741,18 @@ footer{padding:36px 0 48px;text-align:center;font-size:12px;color:var(--sub)}
     window.addEventListener("resize", update);
     update();
   })();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/budoux@0.7.0/bundle/budoux-ja.min.js"></script>
+<script>
+/* 日本語を文節で折り返す（語の途中で行が変わらないように） */
+(function(){
+  document.querySelectorAll("section h2, section p, .step .ttl, .info dd, .policy li, .scene figcaption, .film figcaption, .bleed figcaption, .steps li > div").forEach(function(el){
+    if (el.closest("budoux-ja") || el.closest("form") || el.closest(".igbox") || el.querySelector("img, input, a.btn")) return;
+    var w = document.createElement("budoux-ja");
+    while (el.firstChild) w.appendChild(el.firstChild);
+    el.appendChild(w);
+  });
+})();
 </script>
 <script async src="https://www.instagram.com/embed.js"></script>
 
