@@ -379,6 +379,22 @@ footer{padding:40px 20px 48px;text-align:center;font-size:12px;color:var(--sub);
 .bub .mk2{background:linear-gradient(transparent 58%,#cfe0c3 58%)}
 .bub .mk3{background:linear-gradient(transparent 58%,#f6cdb4 58%)}
 .bub .mk4{background:linear-gradient(transparent 58%,#ead8a6 58%)}
+
+/* 申込の上の箱：見やすく（11/10本人「頭に入らない」） */
+.ic-sum{padding:18px 18px 16px}
+.ics-price{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 12px}
+.ics-p{border:1px solid var(--line);border-radius:10px;padding:12px 8px 10px;text-align:center;background:#fff}
+.ics-p .ics-tag{display:block;font-size:13px;font-weight:700;color:var(--sub);letter-spacing:.1em}
+.ics-p b{display:block;font-size:24px;line-height:1.3;color:var(--forest);letter-spacing:.02em}
+.ics-p small{display:block;font-size:12px;color:var(--sub);margin-top:2px}
+.ics-early{border:2px solid var(--accent);background:#fdf5ef}
+.ics-early .ics-tag,.ics-early b{color:var(--accent)}
+.ic-sum .ics-dl{display:grid;grid-template-columns:3.4em 1fr;margin:0 0 12px;border-top:1px solid var(--line)}
+.ic-sum .ics-dl dt,.ic-sum .ics-dl dd{padding:10px 0;border-bottom:1px solid var(--line);font-size:15.5px;line-height:1.6;margin:0}
+.ic-sum .ics-dl dt{font-weight:700;color:var(--sub)}
+.ic-sum .ics-dl b{font-size:17px;color:var(--forest)}
+.ic-sum .ics-s{font-size:13.5px;color:var(--sub)}
+.ic-sum .ic-note{font-size:13.5px;line-height:1.75;margin:0}
 </style>
 </head>
 <body>
@@ -651,9 +667,15 @@ footer{padding:40px 20px 48px;text-align:center;font-size:12px;color:var(--sub);
     <div class="c"><p class="pill">お申し込み</p>
     <h2>お申し込みと、<br>お席確保代（前金）の<br>お支払い</h2></div>
     <div class="icard ic-sum">
-      <p>参加費　<b>早割€2,360</b>（2026年12月31日まで）／一般€2,510</p>
-      <p>お申し込み時に<b>前金€500</b>。残金は2027年4月末まで。</p>
-      <p>定員は<b>先着10名</b>です。10名になった時点で締め切ります。</p>
+      <div class="ics-price">
+        <div class="ics-p ics-early"><span class="ics-tag">早割</span><b>€2,360</b><small>2026年12月31日まで</small></div>
+        <div class="ics-p"><span class="ics-tag">一般</span><b>€2,510</b><small>2027年1月以降</small></div>
+      </div>
+      <dl class="ics-dl">
+        <dt>前金</dt><dd><b>€500</b>（お申し込み時）</dd>
+        <dt>残金</dt><dd>2027年4月末まで</dd>
+        <dt>定員</dt><dd><b>先着10名</b><br><span class="ics-s">10名になった時点で締め切ります</span></dd>
+      </dl>
       <p class="ic-note">前金のうち€350は、60日前までのキャンセルでも返金されません。くわしくは<a href="#info">「決める前に、知っておいてほしいこと」</a>をご覧ください。</p>
     </div>
     <ol class="steps">
