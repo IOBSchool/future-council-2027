@@ -335,6 +335,21 @@ footer{padding:40px 20px 48px;text-align:center;font-size:12px;color:var(--sub);
 /* v7.1 横山の公開前3点 */
 .qw-s{display:block;font-family:var(--sans);font-weight:400;font-size:13px;color:var(--sub);margin-bottom:4px}
 .ic-note{font-size:14px} .pn{font-size:12.5px} .grid4 figcaption{font-size:14px} .help{font-size:14px} .note-s{font-size:14px}
+
+/* 仲間の言葉（11/10本人「めちゃくちゃ大事・格別に」） */
+.words-sec{padding-bottom:0}
+.words3{display:grid;gap:22px;margin:26px 0 30px}
+.words3 p{position:relative;font-family:var(--serif);font-weight:700;font-size:clamp(23px,6.6vw,30px);line-height:1.65;color:#fbf8f1;margin:0;padding:30px 10px 26px;border-top:1px solid rgba(255,255,255,.18)}
+.words3 p:last-child{border-bottom:1px solid rgba(255,255,255,.18)}
+.wq{position:absolute;left:50%;top:-14px;transform:translateX(-50%);font-family:var(--latin);font-size:46px;line-height:1;color:var(--mark);background:var(--forest);padding:0 10px}
+
+/* FV v8（リアル横山の「もし型」・11/10） */
+.hero3 h1{font-size:clamp(30px,8.9vw,44px) !important;line-height:1.45 !important;font-weight:800;color:var(--ink);margin:2px 0 10px !important}
+.h3-sub{font-size:15px !important;line-height:1.75 !important}
+.h3-sub b{color:var(--forest);font-weight:700}
+.h3-photo img{height:clamp(180px,27svh,320px) !important}
+.h3-btn{font-size:18px !important;padding:15px 20px !important;letter-spacing:.1em}
+.ic-sum{margin:0 0 22px}.ic-sum p{font-size:15px;line-height:1.8;margin:0 0 4px}.ic-sum a{color:var(--forest2)}
 </style>
 </head>
 <body>
@@ -342,15 +357,14 @@ footer{padding:40px 20px 48px;text-align:center;font-size:12px;color:var(--sub);
 <header class="hero3">
   <div class="wrap">
     <p class="h3-eyebrow">ご招待｜オーガニック未来会議 2027</p>
-    <h1><span class="nw">「いつかやりたい」を、</span><br><span class="nw">来年の仕事と暮らしに。</span></h1>
-    <p class="h3-sub">自然を大切にする仲間と、タナホフで<br>来年の夢を語る、招待制の会。</p>
+    <h1>もし、来年こそ<br>温めてきた夢を<br>動かしたいなら。</h1>
+    <p class="h3-sub">自然を大切にする仲間と、<br>次の一年の夢を語り、宣言する。<br><b><span class="nw">「世界最高峰」</span>と私が感じる、<br>南ドイツのビオホテルで。</b></p>
   </div>
-  <div class="h3-photo"><img src="img/y2026s_hike_meadow_fv.jpg" alt="青空の下、タナホフの近くの草原で手を振る2026年の仲間たち" fetchpriority="high"></div>
+  <div class="h3-photo"><img src="img/y2026s_hike_meadow_fv.jpg" alt="青空の下、草原で手を振る2026年ビオホテルツアーの仲間たち" fetchpriority="high"></div>
   <div class="wrap">
     <p class="h3-proof">帰国後、新しい挑戦の準備を始めた参加者も。</p>
-    <p class="h3-flow">オンライン対話<i>→</i>夏の発表会<i>→</i>一年の宣言</p>
     <p class="h3-facts">2027.6.28–7.3｜南ドイツ・5泊6日｜招待制</p>
-    <a class="btn h3-btn" href="#invite" data-cta="fv">この旅で持ち帰るものを見る</a>
+    <a class="btn h3-btn" href="#apply" data-cta="fv">申し込む</a>
   </div>
 </header>
 
@@ -402,7 +416,7 @@ footer{padding:40px 20px 48px;text-align:center;font-size:12px;color:var(--sub);
       <li><span class="no">02</span><b>夏、タナホフで夢の発表会</b>2027年6月28日〜7月3日。</li>
       <li><span class="no">03</span><b>最終日に、次の一年の宣言</b>自分で選んだ未来を、自分の言葉で。</li>
     </ol>
-    <p class="c lead-strong">夢を語って、応援し合って、<br>それぞれの場所へ。<br>そして、またあの森で落ち合う。</p>
+    <p class="c lead-strong">夢を語って、応援し合って、<br>それぞれの場所へ。<br>そして、またあの森で会いましょう。</p>
     <div class="ph"><img src="img/y2026_group3_fv.jpg" alt="タナホフのテラスで、笑顔で乾杯する2026年の仲間たち" loading="lazy" decoding="async"></div>
   </div>
 </section>
@@ -413,20 +427,17 @@ footer{padding:40px 20px 48px;text-align:center;font-size:12px;color:var(--sub);
     <div class="c">
       <p class="pill">2026年の参加者の声</p>
       <h2><span class="nw">「得たもの」と</span><br><span class="nw">「手放したもの」を、</span><br>一人ずつ聞きました。</h2>
-      <p class="note-s">話してくれた言葉のまま載せています。<br>お名前は伏せています。</p>
-    </div>
+      </div>
         <div class="bub r"><div><p class="big">「<mark>むちゃくちゃ居心地が良かった</mark>です」</p><p>普段は仕事の自分みたいな感じで人と関わるんじゃなくて、本当に素の自分でいろんなお話ができた。</p></div><span class="av" aria-hidden="true"></span></div>
     <div class="bub"><span class="av" aria-hidden="true"></span><div><p class="big">「ねばねば星人を、<br>手放しました」</p><p>ねばねば星人から、自分が選択したものでいきたいなっていうことを思いました。</p></div></div>
-        <div class="chips">
-      <p>「また明日から頑張ろうという気持ちに、とてもなれるツアーでした」</p>
-      <p>「何をするにも基盤となる、基礎となるものが得られた」</p>
-    </div>
+        <div class="bub r"><div><p class="big">「また明日から頑張ろうという気持ちに、とてもなれるツアーでした」</p><p>楽しみながら気持ちを整えて。手放したのは、いろんな面での恐怖心。心が落ち着いていれば、怖いとか不安だとかいう気持ちがなくなるな、という気持ちにさせていただいた。</p></div><span class="av" aria-hidden="true"></span></div>
+    <div class="bub"><span class="av" aria-hidden="true"></span><div><p class="big">「私にとって今後、何をするにも基盤となるものが得られた」</p><p>本当に違う土地で、生活ができるっていうか、宿泊できる貴重な体験ができた。本当に自分がどう生きるかっていうところが、ものすごく大切。</p></div></div>
     <div class="afterc">
       <p class="pill pill-o">旅から帰ったあとに</p>
       <p>2026年の参加者の一人は、地域の人たちへの教育活動と、オーガニックのお店の事業を掛け合わせた、<b>新しい取り組みの準備を始めています。</b></p>
     </div>
     <div class="ph"><img src="img/y2026_group1.jpg" alt="2026年の仲間たちの集合写真" loading="lazy" decoding="async"></div>
-    <p class="note-s c">2026年の仲間たち（上の声を話した方を示す写真ではありません）</p>
+    <p class="note-s c">2026年 ビオホテルツアー</p>
     <a class="btn" href="#apply" data-cta="voices">お申し込みはこちら</a>
   </div>
 </section>
@@ -445,11 +456,10 @@ footer{padding:40px 20px 48px;text-align:center;font-size:12px;color:var(--sub);
       <li><span class="yr">2026年 夏</span><b>6回目のタナホフ</b>ドイツ向けの事業や企業研修など、<br>新しい挑戦が次々に動き出しました。</li>
     </ol>
     <p class="saying">その時期が、<br>重なっていたんです。</p>
-    <p class="note-s c">時期が重なっていた、という私の実話です。<br>タナホフが原因だと証明するものではありません。</p>
     <div class="qwords">
       <p>最近の私は、<mark>目に見えないもの</mark>を、<br>以前にも増して大切にするように<br>なりました。</p>
       <p><span class="qw-s">私は、そう感じています。</span>信じれば、そこにある。<br>確信したとき、現実は本当に動きます。</p>
-      <p>ここを原点に、<br>仲間とまた落ち合いたい。</p>
+      <p>ここを原点に、<br>毎年、仲間とこの森に集いたい。</p>
     </div>
     <div class="whyc">
       <p class="whyc-h">なぜ、招待制なのか</p>
@@ -472,13 +482,22 @@ footer{padding:40px 20px 48px;text-align:center;font-size:12px;color:var(--sub);
       <div><b>体と心を大切にする</b>食べること、動くこと、休むこと。目に見えない内側も大切にしています。</div>
       <div><b>人との交流が生まれる</b>お客さん同士が、自然に出会えるように考えられた空間です。</div>
     </div>
-    <div class="words2">
-      <p>「魂が戻る場所」</p>
-      <p>「ここだけ温かい結界があると体感できる場所」</p>
-    </div>
-    <p class="note-s c">2026年に一緒に訪れた仲間の言葉</p>
-    <p class="c lead-strong">タナホフは、私にとって<br><span class="nw">「私に戻る場所」</span>です。<br>あなたにとっては、どんな場所に<br>なるでしょうか。</p>
+    <p class="c lead-strong">タナホフは、私にとって<br><span class="nw">「私に戻る場所」</span>です。</p>
   </div>
+</section>
+
+<!-- 6章のつづき：仲間の言葉（特別な見せ方） -->
+<section class="sec bg-forest words-sec">
+  <div class="wrap c">
+    <p class="pill pill-d">2026年 ビオホテルツアー参加者の言葉</p>
+    <div class="words3">
+      <p><span class="wq">“</span>魂が<br>戻る場所</p>
+      <p><span class="wq">“</span>はじめて来たのに、<br>どこかで来たことがあると<br>感じる場所</p>
+      <p><span class="wq">“</span>ここだけ<br>温かい結界があると<br>体感できる場所</p>
+    </div>
+    <p class="lead-strong">あなたにとっては、<br>どんな場所になるでしょうか。</p>
+  </div>
+  <figure class="ph-wide" style="margin:30px 0 0"><img src="img/y2026_group2.jpg" alt="ラウンジに集まった2026年ビオホテルツアーの仲間たち" loading="lazy" decoding="async"></figure>
 </section>
 
 <!-- 7章：5泊6日（白） -->
@@ -495,7 +514,6 @@ footer{padding:40px 20px 48px;text-align:center;font-size:12px;color:var(--sub);
       <figure><img src="img/y2026_187.jpg" alt="山を望む屋外プール" decoding="async"><figcaption><b>休む</b>プールとサウナで、何もしない時間</figcaption></figure>
     </div>
     <p class="c">大切にしたいのは、たくさん体験することより、<br><b>日常から離れたときに出てくる思い</b>です。</p>
-    <p class="note-s c">写真は2026年の様子です。</p>
   </div>
 </section>
 
@@ -512,7 +530,7 @@ footer{padding:40px 20px 48px;text-align:center;font-size:12px;color:var(--sub);
           <dt>場所</dt><dd>南ドイツ・バイエルン<br>ビオホテル<span class="nw">「タナホフ」</span></dd>
           <dt>人数</dt><dd>招待制・少人数（目安10名）<br>日本在住の方が対象です</dd>
         </dl>
-        <p class="ic-note">最少催行人数は設けていません。人数が少ないことを理由に中止することはありません。</p>
+        <p class="ic-note">最少催行人数は3名です。3名に満たない場合は開催を見送り、お支払いいただいた参加費を全額お返しします。</p>
       </div>
       <div class="icard">
         <p class="ic-h">参加費（税込み）</p>
@@ -602,6 +620,11 @@ footer{padding:40px 20px 48px;text-align:center;font-size:12px;color:var(--sub);
   <div class="wrap">
     <div class="c"><p class="pill">お申し込み</p>
     <h2>お申し込みと、<br>お席確保代（前金）の<br>お支払い</h2></div>
+    <div class="icard ic-sum">
+      <p>参加費　<b>早割€2,360</b>（2026年12月31日まで）／一般€2,510</p>
+      <p>お申し込み時に<b>前金€500</b>。残金は2027年4月末まで。</p>
+      <p class="ic-note">前金のうち€350は、60日前までのキャンセルでも返金されません。くわしくは<a href="#info">「決める前に、知っておいてほしいこと」</a>をご覧ください。</p>
+    </div>
     <ol class="steps">
       <li><span class="no">1</span><div>お名前・ご住所・メールアドレスを入力します</div></li>
       <li><span class="no">2</span><div>キャンセルポリシーに同意して、お支払い方法のボタンを押します</div></li>
