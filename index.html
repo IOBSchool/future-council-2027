@@ -350,21 +350,38 @@ footer{padding:40px 20px 48px;text-align:center;font-size:12px;color:var(--sub);
 .h3-photo img{height:clamp(180px,27svh,320px) !important}
 .h3-btn{font-size:18px !important;padding:15px 20px !important;letter-spacing:.1em}
 .ic-sum{margin:0 0 22px}.ic-sum p{font-size:15px;line-height:1.8;margin:0 0 4px}.ic-sum a{color:var(--forest2)}
+
+/* FV 案7（11/10本人決定・写真を全面背景に、空に白い文字を影で） */
+.hero7{position:relative;height:100svh;min-height:600px;max-height:900px;color:#fff;overflow:hidden;background:#3a5a7a}
+.h7-ph{position:absolute;inset:0}
+.h7-ph img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.h7-ph:after{content:"";position:absolute;left:0;right:0;bottom:0;height:42%;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.42))}
+.h7-in{position:absolute;left:0;right:0;top:max(30px,env(safe-area-inset-top,0px));text-align:center;padding:0 20px}
+.h7-lab{font-size:12px;letter-spacing:.22em;font-weight:500;text-shadow:0 1px 8px rgba(0,30,60,.6);margin:0}
+.h7-line{width:46px;height:1px;background:#f0d9a8;margin:10px auto 0}
+.hero7 h1{font-family:var(--serif);font-weight:700;font-size:clamp(30px,8.5vw,46px);line-height:1.5;letter-spacing:.06em;margin:12px 0 10px;color:#fff;text-shadow:0 2px 4px rgba(0,25,50,.4),0 4px 24px rgba(0,25,50,.55)}
+.h7-sub{font-size:13.5px;line-height:1.85;margin:0;color:#fff;text-shadow:0 1px 3px rgba(0,25,50,.6),0 2px 14px rgba(0,25,50,.5)}
+.h7-sub b{color:#fbe6b8;font-weight:700}
+.h7-bot{position:absolute;left:24px;right:24px;bottom:max(22px,env(safe-area-inset-bottom,0px));text-align:center;max-width:440px;margin:0 auto}
+.h7-pr{font-size:13px;font-weight:700;margin:0;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.h7-ft{font-size:11.5px;margin:2px 0 0;letter-spacing:.06em;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.h7-btn{display:block;margin-top:12px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;letter-spacing:.2em;border-radius:2px;padding:15px;font-size:17px;box-shadow:0 0 0 1px rgba(240,217,168,.9),0 8px 22px rgba(0,0,0,.3)}
 </style>
 </head>
 <body>
 
-<header class="hero3">
-  <div class="wrap">
-    <p class="h3-eyebrow">ご招待｜オーガニック未来会議 2027</p>
+<header class="hero7">
+  <div class="h7-ph"><img src="img/y2026s_hike_meadow.jpg" alt="青空の下、草原で手を振る2026年ビオホテルツアーの仲間たち" fetchpriority="high"></div>
+  <div class="h7-in">
+    <p class="h7-lab">ご招待｜オーガニック未来会議 2027</p>
+    <div class="h7-line"></div>
     <h1>もし、来年こそ<br>温めてきた夢を<br>動かしたいなら。</h1>
-    <p class="h3-sub">自然を大切にする仲間と、<br>次の一年の夢を語り、宣言する。<br><b><span class="nw">「世界最高峰」</span>と私が感じる、<br>南ドイツのビオホテルで。</b></p>
+    <p class="h7-sub">自然を大切にする仲間と、<br>次の一年の夢を語り、宣言する。<br><b><span class="nw">「世界最高峰」</span>と私が感じる、<br>南ドイツのビオホテルで。</b></p>
   </div>
-  <div class="h3-photo"><img src="img/y2026s_hike_meadow_fv.jpg" alt="青空の下、草原で手を振る2026年ビオホテルツアーの仲間たち" fetchpriority="high"></div>
-  <div class="wrap">
-    <p class="h3-proof">帰国後、新しい挑戦の準備を始めた参加者も。</p>
-    <p class="h3-facts">2027.6.28–7.3｜南ドイツ・5泊6日｜招待制</p>
-    <a class="btn h3-btn" href="#apply" data-cta="fv">申し込む</a>
+  <div class="h7-bot">
+    <p class="h7-pr">帰国後、新しい挑戦の準備を始めた参加者も。</p>
+    <p class="h7-ft">2027.6.28–7.3｜南ドイツ・5泊6日｜招待制</p>
+    <a class="h7-btn" href="#apply" data-cta="fv">申し込む</a>
   </div>
 </header>
 
